@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Examen_Application_Web.Models.Ecrire>
+
+@{
+    ViewBag.Title = "Livres et leurs Auteurs - UAGO";
+    var groupeParLivre = Model.GroupBy(x => x.TitreLivre);
+}
+
+<h2><i class="fa fa-book-open"></i> Livres et leurs Auteurs</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">Aucune donnée disponible.</div>
+}
+else
+{
+    foreach (var groupe in groupeParLivre)
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>@groupe.Key</strong> - @groupe.Count() auteur(s)
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Auteur</th>
+                            <th>Date Publication</th>
+                            <th>Pages</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in groupe)
+                        {
+                            <tr>
+                                <td>@item.NomAuteur</td>
+                                <td>@(item.datPub.HasValue ? item.datPub.Value.ToString("dd/MM/yyyy") : "---")</td>
+                                <td>@item.nbrePag</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+}

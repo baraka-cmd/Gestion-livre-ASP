@@ -1,0 +1,99 @@
+﻿@model Examen_Application_Web.Models.Livre
+@{
+    ViewBag.Title = "Modification Livre - Système UAGO";
+}
+
+<div class="desktop-wrapper">
+    
+    <div class="form-header-strip" style="background: linear-gradient(90deg, #d35400 0%, #e67e22 100%);">
+        <label>MISE À JOUR TECHNIQUE - FICHE LIVRE</label>
+        <span class="status-mode" style="background: #f39c12;">Mode : Édition</span>
+    </div>
+
+    <div class="form-content-body">
+        @using (Html.BeginForm("Edit", "Livre", FormMethod.Post, new { id = "frmEditLivre" }))
+        {
+            @Html.AntiForgeryToken()
+
+            
+            @Html.HiddenFor(m => m.idLivre)
+
+            <fieldset class="group-box">
+                <legend>Données de l'ouvrage n° @Model.idLivre</legend>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label>Identifiant du Livre (Verrouillé) :</label>
+                            <input type="text" class="form-control" value="@Model.idLivre" readonly style="background:#f4f6f7; color: #7f8c8d; font-weight: bold; border-left: 4px solid #bdc3c7;" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label>Nombre de Pages :</label>
+                            @Html.TextBoxFor(m => m.nbrepage, new { @class = "form-control", type = "number", min = "1" })
+                            @Html.ValidationMessageFor(m => m.nbrepage, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:15px;">
+                    <div class="col-md-12">
+                        <div class="form-item">
+                            <label>Titre de l'Ouvrage :</label>
+                            @Html.TextBoxFor(m => m.titre, new { @class = "form-control", placeholder = "TITRE COMPLET", required = "required" })
+                            @Html.ValidationMessageFor(m => m.titre, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="action-tool-strip" style="margin-top: 25px;">
+                <button type="submit" class="btn-action warning">
+                    <i class="fa fa-sync"></i> APPLIQUER LES CHANGEMENTS
+                </button>
+                
+                <a href="@Url.Action("Index")" class="btn-action default" style="text-decoration:none;">
+                    <i class="fa fa-undo"></i> ANNULER
+                </a>
+
+                <div class="pull-right">
+                    <a href="@Url.Action("Index")" class="btn-action dark" style="text-decoration:none;">
+                        <i class="fa fa-power-off"></i> QUITTER
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            $(".form-control").focus(function () {
+                $(this).css("border-color", "#e67e22");
+                $(this).css("box-shadow", "0 0 8px rgba(230, 126, 34, 0.2)");
+            }).blur(function () {
+                $(this).css("border-color", "#eaeeef");
+                $(this).css("box-shadow", "none");
+            });
+
+            
+            $("input").on("change input", function () {
+                $(".status-mode").text("Mode : Modification en cours...").css("background", "#e74c3c");
+            });
+
+            
+            $("#frmEditLivre").on("submit", function () {
+                var titre = $("#titre").val().trim();
+                if (titre.length < 2) {
+                    alert("Le titre doit contenir au moins 2 caractères.");
+                    return false;
+                }
+                return true;
+            });
+        });
+    </script>
+}

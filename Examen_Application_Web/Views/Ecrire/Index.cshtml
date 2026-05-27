@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Examen_Application_Web.Models.Ecrire>
+
+@{
+    ViewBag.Title = "Registre des Publications - Système UAGO";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="action-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+            <h2 style="color: #2c3e50; font-weight: bold; margin: 0;">
+                <i class="fa fa-bookmark text-primary"></i> REGISTRE DES PUBLICATIONS
+            </h2>
+            <a href="@Url.Action("Create")" class="btn btn-primary shadow-sm">
+                <i class="fa fa-plus-circle"></i> NOUVELLE AFFECTATION
+            </a>
+        </div>
+
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-4">
+                <div class="well" style="background: #fff; border-left: 5px solid #3498db; padding: 15px;">
+                    <small class="text-muted text-uppercase">Total Liaisons</small>
+                    <h3 style="margin: 5px 0; font-weight: bold;">@Model.Count()</h3>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="well" style="background: #fff; padding: 10px;">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" id="txtSearch" class="form-control" placeholder="Rechercher un auteur ou un livre..." style="height: 40px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive shadow-lg" style="background: #fff; border-radius: 12px; overflow: hidden;">
+            <table class="table table-hover" id="tblEcrire" style="margin-bottom: 0;">
+                <thead style="background-color: #2c3e50; color: #fff;">
+                    <tr>
+                        <th style="padding: 15px;">TITRE DU OUVRAGE</th>
+                        <th style="padding: 15px;">AUTEUR ASSOCIÉ</th>
+                        <th style="padding: 15px; text-align: center;">PAGES</th>
+                        <th style="padding: 15px;">DATE PUB.</th>
+                        <th style="padding: 15px; text-align: center; width: 180px;">OPTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td style="font-weight: 600; color: #2980b9;">
+                                    <i class="fa fa-book"></i> @item.TitreLivre
+                                </td>
+                                <td style="text-transform: uppercase; font-weight: 500;">
+                                    @item.NomAuteur
+                                </td>
+                                <td style="text-align: center;">
+                                    <span class="badge" style="background-color: #e67e22;">@item.nbrePag pages</span>
+                                </td>
+                                <td>
+                                    <i class="fa fa-calendar-o"></i> 
+                                    @(item.datPub.HasValue ? item.datPub.Value.ToString("dd/MM/yyyy") : "---")
+                                </td>
+                                <td style="text-align: center;">
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="@Url.Action("Edit", new { idAut = item.idAuteur, idLiv = item.idLivre })" class="btn btn-warning" title="Modifier">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                        <a href="@Url.Action("Delete", new { idAut = item.idAuteur, idLiv = item.idLivre })" class="btn btn-danger" onclick="return confirm('Supprimer ce lien ?')" title="Supprimer">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center" style="padding: 40px; color: #95a5a6;">
+                                <i class="fa fa-info-circle fa-2x"></i><br />
+                                Aucune donnée de publication disponible.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+          
+            $("#txtSearch").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#tblEcrire tbody tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+}

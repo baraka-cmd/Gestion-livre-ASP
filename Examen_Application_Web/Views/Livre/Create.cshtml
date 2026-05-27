@@ -1,0 +1,96 @@
+﻿@model Examen_Application_Web.Models.Livre
+@{
+    ViewBag.Title = "Nouvel Ouvrage - Système UAGO";
+}
+
+<div class="desktop-wrapper">
+    
+    <div class="form-header-strip" style="background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%);">
+        <label>ENREGISTREMENT TECHNIQUE - FICHE LIVRE</label>
+        <span class="status-mode">Mode : Nouvel Index</span>
+    </div>
+
+    <div class="form-content-body">
+        @using (Html.BeginForm("Create", "Livre", FormMethod.Post, new { id = "frmLivre" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <fieldset class="group-box">
+                <legend>Informations sur l'Ouvrage (Stock Seul)</legend>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label>Identifiant / Code Livre :</label>
+                            @Html.TextBoxFor(m => m.idLivre, new { @class = "form-control", placeholder = "ex: L-001", required = "required" })
+                            @Html.ValidationMessageFor(m => m.idLivre, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label>Nombre total de Pages :</label>
+                            @Html.TextBoxFor(m => m.nbrepage, new { @class = "form-control", type = "number", min = "1", placeholder = "0" })
+                            @Html.ValidationMessageFor(m => m.nbrepage, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:15px;">
+                    <div class="col-md-12">
+                        <div class="form-item">
+                            <label>Titre Complet de l'Ouvrage :</label>
+                            @Html.TextBoxFor(m => m.titre, new { @class = "form-control", placeholder = "SAISIR LE TITRE ICI", required = "required" })
+                            @Html.ValidationMessageFor(m => m.titre, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="action-tool-strip" style="margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px;">
+                <button type="submit" class="btn-action primary">
+                    <i class="fa fa-save"></i> ENREGISTRER LE LIVRE
+                </button>
+                
+                <button type="reset" class="btn-action default">
+                    <i class="fa fa-refresh"></i> RÉINITIALISER
+                </button>
+                
+                <div class="pull-right">
+                    <a href="@Url.Action("Index")" class="btn-action dark">
+                        <i class="fa fa-arrow-left"></i> VOIR LA LISTE
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            $(".form-control").focus(function () {
+                $(this).css("border-color", "#3498db");
+                $(this).css("box-shadow", "0 0 8px rgba(52,152,219,0.2)");
+            }).blur(function () {
+                $(this).css("border-color", "#eaeeef");
+                $(this).css("box-shadow", "none");
+            });
+
+            
+            $("#idLivre").on("input", function () {
+                $(this).val($(this).val().toUpperCase());
+            });
+
+            
+            $("#frmLivre").submit(function () {
+                if ($("#idLivre").val().trim() === "" || $("#titre").val().trim() === "") {
+                    alert("Veuillez remplir tous les champs obligatoires.");
+                    return false;
+                }
+                return true;
+            });
+        });
+    </script>
+}

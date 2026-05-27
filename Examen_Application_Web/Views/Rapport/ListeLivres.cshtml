@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Examen_Application_Web.Models.Livre>
+
+@{
+    ViewBag.Title = "Catalogue des Livres - UAGO";
+}
+
+<h2><i class="fa fa-book"></i> Catalogue des Livres</h2>
+
+<p>
+    <a href="@Url.Action("Index", "Livre")" class="btn btn-primary">
+        <i class="fa fa-plus"></i> Gérer les Livres
+    </a>
+</p>
+
+<p><strong>Total :</strong> @Model.Count() livre(s)</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Titre</th>
+            <th>Nombre de Pages</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.idLivre</td>
+                <td>@item.titre</td>
+                <td>@item.nbrepage</td>
+            </tr>
+        }
+    </tbody>
+</table>

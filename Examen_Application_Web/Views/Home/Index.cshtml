@@ -1,0 +1,237 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "Tableau de Bord - UAGO";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header" style="color: #2c3e50; font-weight: 700; border-bottom: 3px solid #3498db;">
+            <i class="fa fa-tachometer-alt"></i> Tableau de Bord 
+            <small style="color: #7f8c8d;">Gestion de la Bibliothèque - UAGO</small>
+        </h2>
+    </div>
+</div>
+
+<div class="row">
+    
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary card-stat" style="border-radius: 10px; overflow: hidden;">
+            <div class="panel-heading" style="background: #3498db; border: none;">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-book fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">@ViewBag.TotalLivres</div>
+                        <div>Ouvrages Enregistrés</div>
+                    </div>
+                </div>
+            </div>
+            <a href="@Url.Action("Index", "Livre")" style="text-decoration: none;">
+                <div class="panel-footer" style="background: #f8f9fa; color: #3498db; font-weight: 600;">
+                    <span class="pull-left">Gérer les ouvrages</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+  
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-green card-stat" style="border-radius: 10px; overflow: hidden;">
+            <div class="panel-heading" style="background: #27ae60; border: none;">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-users fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">@ViewBag.TotalAuteurs</div>
+                        <div>Auteurs Référencés</div>
+                    </div>
+                </div>
+            </div>
+            <a href="@Url.Action("Index", "Auteur")" style="text-decoration: none;">
+                <div class="panel-footer" style="background: #f8f9fa; color: #27ae60; font-weight: 600;">
+                    <span class="pull-left">Gérer les auteurs</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+ 
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-yellow card-stat" style="border-radius: 10px; overflow: hidden;">
+            <div class="panel-heading" style="background: #f39c12; border: none;">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-link fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">@ViewBag.TotalEcrire</div>
+                        <div>Publications Établies</div>
+                    </div>
+                </div>
+            </div>
+            <a href="@Url.Action("Index", "Ecrire")" style="text-decoration: none;">
+                <div class="panel-footer" style="background: #f8f9fa; color: #f39c12; font-weight: 600;">
+                    <span class="pull-left">Associer Auteur/Livre</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-red card-stat" style="border-radius: 10px; overflow: hidden;">
+            <div class="panel-heading" style="background: #e74c3c; border: none;">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-file-text fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">@ViewBag.TotalRapports</div>
+                        <div>États Disponibles</div>
+                    </div>
+                </div>
+            </div>
+            <a href="@Url.Action("Index", "Rapport")" style="text-decoration: none;">
+                <div class="panel-footer" style="background: #f8f9fa; color: #e74c3c; font-weight: 600;">
+                    <span class="pull-left">Consulter les rapports</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="row" style="margin-top: 30px;">
+    <div class="col-md-12">
+        <div class="panel panel-default" style="border-radius: 10px; overflow: hidden;">
+            <div class="panel-heading" style="background: #2c3e50; color: #fff; border: none;">
+                <h3 class="panel-title" style="font-weight: 700;">
+                    <i class="fa fa-file-text"></i> Accès Rapide aux Rapports
+                </h3>
+            </div>
+            <div class="panel-body" style="padding: 25px;">
+                <div class="row">
+
+                    <div class="col-md-4" style="margin-bottom: 15px;">
+                        <a href="@Url.Action("ListeAuteurs", "Rapport")" class="btn btn-default btn-block" style="text-align: left; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #3498db;">
+                            <i class="fa fa-users" style="color: #3498db;"></i>
+                            <strong>Répertoire des Auteurs</strong>
+                            <span class="pull-right"><i class="fa fa-chevron-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-4" style="margin-bottom: 15px;">
+                        <a href="@Url.Action("ListeLivres", "Rapport")" class="btn btn-default btn-block" style="text-align: left; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #2ecc71;">
+                            <i class="fa fa-book" style="color: #2ecc71;"></i>
+                            <strong>Catalogue des Ouvrages</strong>
+                            <span class="pull-right"><i class="fa fa-chevron-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-4" style="margin-bottom: 15px;">
+                        <a href="@Url.Action("PublicationsParAuteur", "Rapport")" class="btn btn-default btn-block" style="text-align: left; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #e67e22;">
+                            <i class="fa fa-user-edit" style="color: #e67e22;"></i>
+                            <strong>Productions Littéraires</strong>
+                            <span class="pull-right"><i class="fa fa-chevron-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-4" style="margin-bottom: 15px;">
+                        <a href="@Url.Action("LivresEtAuteurs", "Rapport")" class="btn btn-default btn-block" style="text-align: left; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #9b59b6;">
+                            <i class="fa fa-book-open" style="color: #9b59b6;"></i>
+                            <strong>Fiche par Ouvrage</strong>
+                            <span class="pull-right"><i class="fa fa-chevron-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-4" style="margin-bottom: 15px;">
+                        <a href="@Url.Action("AuteursSansPublication", "Rapport")" class="btn btn-default btn-block" style="text-align: left; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                            <i class="fa fa-user-clock" style="color: #e74c3c;"></i>
+                            <strong>Auteurs en Attente</strong>
+                            <span class="pull-right"><i class="fa fa-chevron-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-4" style="margin-bottom: 15px;">
+                        <a href="@Url.Action("LivresSansAuteur", "Rapport")" class="btn btn-default btn-block" style="text-align: left; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #f39c12;">
+                            <i class="fa fa-question-circle" style="color: #f39c12;"></i>
+                            <strong>Ouvrages Non Attribués</strong>
+                            <span class="pull-right"><i class="fa fa-chevron-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-4" style="margin-bottom: 15px;">
+                        <a href="@Url.Action("InventaireLivres", "Rapport")" class="btn btn-default btn-block" style="text-align: left; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #1abc9c;">
+                            <i class="fa fa-clipboard-list" style="color: #1abc9c;"></i>
+                            <strong>État du Stock</strong>
+                            <span class="pull-right"><i class="fa fa-chevron-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-4" style="margin-bottom: 15px;">
+                        <a href="@Url.Action("StatistiquesParAuteur", "Rapport")" class="btn btn-default btn-block" style="text-align: left; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #34495e;">
+                            <i class="fa fa-chart-bar" style="color: #34495e;"></i>
+                            <strong>Bilan par Auteur</strong>
+                            <span class="pull-right"><i class="fa fa-chevron-right"></i></span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <hr style="margin: 20px 0;">
+
+                <div class="text-center">
+                    <a href="@Url.Action("Index", "Rapport")" class="btn btn-primary btn-lg" style="border-radius: 8px; padding: 12px 40px;">
+                        <i class="fa fa-folder-open"></i> Voir Tous les Rapports
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row" style="margin-top: 20px;">
+    <div class="col-md-8">
+        <div class="well welcome-box" style="border-radius: 10px; background: #fff; border-left: 5px solid #3498db;">
+            <h3 style="color: #2c3e50;"><i class="fa fa-info-circle" style="color: #3498db;"></i> Bienvenue, Administrateur</h3>
+            <p style="color: #7f8c8d;">
+                Vous êtes connecté au système de gestion centralisée de la bibliothèque universitaire. 
+                Utilisez les cartes ci-dessus ou la barre de navigation pour accéder aux différents modules de l'application.
+            </p>
+            <hr>
+            <p class="text-muted">
+                <i class="fa fa-sync"></i> Dernière synchronisation : @DateTime.Now.ToString("dd/MM/yyyy à HH:mm")
+            </p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="list-group" style="border-radius: 10px; overflow: hidden;">
+            <a href="#" class="list-group-item active" style="background: #2c3e50; border: none;">
+                <i class="fa fa-clock"></i> <strong>Activités Récentes</strong>
+            </a>
+            <a href="#" class="list-group-item">
+                <i class="fa fa-sign-in-alt"></i> Connexion : @DateTime.Now.ToString("HH:mm")
+            </a>
+            <a href="#" class="list-group-item">
+                <i class="fa fa-database"></i> Base : BiblioUAGO.accdb
+            </a>
+            <a href="#" class="list-group-item">
+                <i class="fa fa-shield-alt"></i> Mode : Administration
+            </a>
+            <a href="@Url.Action("Index", "Rapport")" class="list-group-item" style="color: #e74c3c; font-weight: 600;">
+                <i class="fa fa-chart-pie"></i> Centre de Rapports
+                <span class="badge pull-right" style="background: #e74c3c;">@ViewBag.TotalRapports</span>
+            </a>
+        </div>
+    </div>
+</div>

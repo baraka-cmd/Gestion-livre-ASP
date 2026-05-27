@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Notification Système";
+    var msgType = ViewBag.Type ?? "success"; 
+}
+
+<div class="message-wrapper">
+    <div class="message-container animated bounceIn">
+        
+        <div class="message-icon-circle @msgType">
+            @if (msgType == "success") {
+                <i class="fa fa-check"></i>
+            } else if (msgType == "error") {
+                <i class="fa fa-times"></i>
+            } else {
+                <i class="fa fa-exclamation"></i>
+            }
+        </div>
+
+        <h2 class="message-title">@ViewBag.Message</h2>
+        <p class="message-subtitle">L'opération a été traitée par le serveur de l'UAGO.</p>
+
+        <div class="progress-loader">
+            <div class="progress-bar-fill"></div>
+        </div>
+
+        <p class="redirect-text">
+            Redirection automatique dans quelques secondes...
+        </p>
+
+        <div class="message-actions">
+           
+            <a href="@ViewBag.Redirection" class="btn btn-primary btn-lg">
+                <i class="fa fa-arrow-left"></i> Continuer maintenant
+            </a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        
+        setTimeout(function () {
+            window.location.href = "@ViewBag.Redirection";
+        }, 3000);
+    </script>
+}

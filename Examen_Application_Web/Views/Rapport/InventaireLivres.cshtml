@@ -1,0 +1,67 @@
+﻿@model Examen_Application_Web.Models.RapportInventaireViewModel
+
+@{
+    ViewBag.Title = "Inventaire des Livres - UAGO";
+}
+
+<div class="report-container">
+   <div class="stats-grid">
+        <div class="stat-card blue">
+            <div class="stat-icon"><i class="fa fa-book"></i></div>
+            <div class="stat-details">
+                <span class="stat-label">Total Livres</span>
+              
+                <h2 class="stat-value">@Model.TotalLivres</h2>
+            </div>
+        </div>
+
+        <div class="stat-card orange">
+            <div class="stat-icon"><i class="fa fa-copy"></i></div>
+            <div class="stat-details">
+                <span class="stat-label">Total Pages</span>
+              
+                <h2 class="stat-value">@Model.TotalPages</h2>
+            </div>
+        </div>
+
+        <div class="stat-card green">
+            <div class="stat-icon"><i class="fa fa-calculator"></i></div>
+            <div class="stat-details">
+                <span class="stat-label">Moyenne Pages/Livre</span>
+                
+                <h2 class="stat-value">@Model.MoyennePages</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="report-panel">
+        <div class="panel-header">
+            <h3><i class="fa fa-list"></i> Liste Technique de l'Inventaire</h3>
+            <button onclick="window.print()" class="btn-print">
+                <i class="fa fa-print"></i> Imprimer
+            </button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="uago-table">
+                <thead>
+                    <tr>
+                        <th>Code Ouvrage</th>
+                        <th>Titre du Livre</th>
+                        <th class="text-right">Nombre de Pages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.ListeLivres)
+                    {
+                        <tr>
+                            <td class="code-cell">#@item.idLivre</td>
+                            <td class="title-cell">@item.titre</td>
+                            <td class="text-right"><strong>@item.nbrepage</strong></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

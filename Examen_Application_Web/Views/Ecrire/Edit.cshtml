@@ -1,0 +1,127 @@
+﻿@model Examen_Application_Web.Models.Ecrire
+
+@{
+    ViewBag.Title = "Modification de l'Affectation - Système UAGO";
+}
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-primary shadow-lg" style="margin-top: 30px; border-radius: 12px;">
+            <div class="panel-heading" style="padding: 25px;">
+                <h3 class="panel-title" style="font-size: 22px; font-weight: bold;">
+                    <i class="fa fa-pencil-square-o"></i> Modifier l'Association
+                </h3>
+                <small style="color: #bdc3c7;">ID Auteur : #@Model.idAuteur | ID Livre : #@Model.idLivre</small>
+            </div>
+
+            <div class="panel-body" style="padding: 40px;">
+                @using (Html.BeginForm("Edit", "Ecrire", FormMethod.Post, new { id = "frmEditEcrire" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                  
+                    <input type="hidden" name="oldIdAuteur" value="@Model.idAuteur" />
+                    <input type="hidden" name="oldIdLivre" value="@Model.idLivre" />
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label style="color: #2c3e50;"><i class="fa fa-book"></i> Sélectionner le Livre :</label>
+                                @Html.DropDownListFor(m => m.idLivre, 
+                                    ViewBag.Livres as SelectList, 
+                                    "-- Choisir un ouvrage --", 
+                                    new { @class = "form-control", id = "ddlLivre", style = "height: 45px; border-left: 5px solid #3498db;" })
+                                @Html.ValidationMessageFor(m => m.idLivre, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label style="color: #2c3e50;"><i class="fa fa-user"></i> Sélectionner l'Auteur :</label>
+                                @Html.DropDownListFor(m => m.idAuteur, 
+                                    ViewBag.Auteurs as SelectList, 
+                                    "-- Choisir l'auteur --", 
+                                    new { @class = "form-control", style = "height: 45px; border-left: 5px solid #2ecc71;" })
+                                @Html.ValidationMessageFor(m => m.idAuteur, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label style="color: #2c3e50;"><i class="fa fa-calendar"></i> Date de Publication :</label>
+                                @Html.TextBoxFor(m => m.datPub, new
+                                {
+                                    @class = "form-control",
+                                    type = "date",
+                                    Value = (Model.datPub.HasValue ? Model.datPub.Value.ToString("yyyy-MM-dd") : ""),
+                                    style = "height: 45px;"
+                                })
+                                @Html.ValidationMessageFor(m => m.datPub, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label style="color: #2c3e50;"><i class="fa fa-copy"></i> Nombre de Pages :</label>
+                                @Html.TextBoxFor(m => m.nbrePag, new { @class = "form-control", id = "txtPages", style = "height: 45px; font-weight: bold; color: #2980b9;" })
+                                @Html.ValidationMessageFor(m => m.nbrePag, "", new { @class = "text-danger" })
+                                <small class="text-muted">Rempli automatiquement selon le livre sélectionné.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions" style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #f1f2f6; text-align: right;">
+                        <a href="@Url.Action("Index")" class="btn btn-default">
+                            <i class="fa fa-times"></i> ANNULER
+                        </a>
+                        <button type="submit" class="btn btn-warning" style="min-width: 200px;">
+                            <i class="fa fa-save"></i> METTRE À JOUR
+                        </button>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="alert alert-info" style="margin-top: 20px; border-radius: 8px;">
+            <i class="fa fa-info-circle"></i> <strong>Note :</strong> Vous pouvez modifier le livre et l'auteur. Le nombre de pages se met à jour automatiquement selon le livre choisi.
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            $(".form-control").on("focus", function () {
+                $(this).closest(".form-group").find("label").css("color", "#3498db");
+            }).on("blur", function () {
+                $(this).closest(".form-group").find("label").css("color", "#2c3e50");
+            });
+
+            
+            $("#ddlLivre").change(function () {
+                var selectedId = $(this).val();
+                console.log("ID sélectionné:", selectedId);
+
+                if (selectedId) {
+                    $.ajax({
+                        url: '@Url.Action("GetNombrePages", "Livre")',
+                        type: 'GET',
+                        data: { id: selectedId },
+                        success: function (data) {
+                            console.log("Réponse reçue:", data);
+                            $("#txtPages").val(data);
+                        },
+                        error: function (xhr, status, error) {
+                            console.log("Erreur AJAX:", status, error);
+                        }
+                    });
+                } else {
+                    $("#txtPages").val("");
+                }
+            });
+        });
+    </script>
+}

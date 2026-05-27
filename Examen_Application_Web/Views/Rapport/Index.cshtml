@@ -1,0 +1,145 @@
+﻿@{
+    ViewBag.Title = "Centre de Rapports - UAGO";
+}
+
+<div class="container" style="margin-top: 80px;">
+    
+    <div class="page-header" style="border-bottom: 3px solid #2c3e50; margin-bottom: 30px;">
+        <h1 style="color: #2c3e50; font-weight: 700;">
+            <i class="fa fa-file-text" style="color: #3498db;"></i> Centre de Rapports
+        </h1>
+        <p style="color: #7f8c8d; font-size: 16px;">Sélectionnez le rapport que vous souhaitez consulter</p>
+    </div>
+
+    <div class="row">
+
+       
+        <div class="col-md-6 col-lg-4" style="margin-bottom: 25px;">
+            <div class="panel panel-default" style="border-top: 4px solid #3498db; border-radius: 8px; height: 100%;">
+                <div class="panel-body text-center" style="padding: 30px 20px;">
+                    <div style="font-size: 48px; color: #3498db; margin-bottom: 15px;">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <h4 style="color: #2c3e50; font-weight: 700;">Répertoire des Auteurs</h4>
+                    <p style="color: #7f8c8d; font-size: 13px;">Liste complète de tous les auteurs enregistrés dans le système</p>
+                    <a href="@Url.Action("ListeAuteurs", "Rapport")" class="btn btn-primary btn-block" style="margin-top: 15px; border-radius: 5px;">
+                        <i class="fa fa-eye"></i> Consulter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-4" style="margin-bottom: 25px;">
+            <div class="panel panel-default" style="border-top: 4px solid #2ecc71; border-radius: 8px; height: 100%;">
+                <div class="panel-body text-center" style="padding: 30px 20px;">
+                    <div style="font-size: 48px; color: #2ecc71; margin-bottom: 15px;">
+                        <i class="fa fa-book"></i>
+                    </div>
+                    <h4 style="color: #2c3e50; font-weight: 700;">Catalogue des Ouvrages</h4>
+                    <p style="color: #7f8c8d; font-size: 13px;">Inventaire complet des livres disponibles dans la bibliothèque</p>
+                    <a href="@Url.Action("ListeLivres", "Rapport")" class="btn btn-success btn-block" style="margin-top: 15px; border-radius: 5px;">
+                        <i class="fa fa-eye"></i> Consulter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+      
+        <div class="col-md-6 col-lg-4" style="margin-bottom: 25px;">
+            <div class="panel panel-default" style="border-top: 4px solid #e67e22; border-radius: 8px; height: 100%;">
+                <div class="panel-body text-center" style="padding: 30px 20px;">
+                    <div style="font-size: 48px; color: #e67e22; margin-bottom: 15px;">
+                        <i class="fa fa-user-edit"></i>
+                    </div>
+                    <h4 style="color: #2c3e50; font-weight: 700;">Productions Littéraires</h4>
+                    <p style="color: #7f8c8d; font-size: 13px;">Ouvrages publiés regroupés par auteur avec dates et volumes</p>
+                    <a href="@Url.Action("PublicationsParAuteur", "Rapport")" class="btn btn-warning btn-block" style="margin-top: 15px; border-radius: 5px; color: #fff;">
+                        <i class="fa fa-eye"></i> Consulter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-4" style="margin-bottom: 25px;">
+            <div class="panel panel-default" style="border-top: 4px solid #9b59b6; border-radius: 8px; height: 100%;">
+                <div class="panel-body text-center" style="padding: 30px 20px;">
+                    <div style="font-size: 48px; color: #9b59b6; margin-bottom: 15px;">
+                        <i class="fa fa-book-open"></i>
+                    </div>
+                    <h4 style="color: #2c3e50; font-weight: 700;">Fiche par Ouvrage</h4>
+                    <p style="color: #7f8c8d; font-size: 13px;">Détail de chaque livre avec le(s) auteur(s) associé(s)</p>
+                    <a href="@Url.Action("LivresEtAuteurs", "Rapport")" class="btn btn-info btn-block" style="margin-top: 15px; background: #9b59b6; border-color: #9b59b6; border-radius: 5px;">
+                        <i class="fa fa-eye"></i> Consulter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="col-md-6 col-lg-4" style="margin-bottom: 25px;">
+            <div class="panel panel-default" style="border-top: 4px solid #e74c3c; border-radius: 8px; height: 100%;">
+                <div class="panel-body text-center" style="padding: 30px 20px;">
+                    <div style="font-size: 48px; color: #e74c3c; margin-bottom: 15px;">
+                        <i class="fa fa-user-clock"></i>
+                    </div>
+                    <h4 style="color: #2c3e50; font-weight: 700;">Auteurs en Attente</h4>
+                    <p style="color: #7f8c8d; font-size: 13px;">Auteurs n'ayant pas encore de publication associée</p>
+                    <a href="@Url.Action("AuteursSansPublication", "Rapport")" class="btn btn-danger btn-block" style="margin-top: 15px; border-radius: 5px;">
+                        <i class="fa fa-eye"></i> Consulter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-4" style="margin-bottom: 25px;">
+            <div class="panel panel-default" style="border-top: 4px solid #f39c12; border-radius: 8px; height: 100%;">
+                <div class="panel-body text-center" style="padding: 30px 20px;">
+                    <div style="font-size: 48px; color: #f39c12; margin-bottom: 15px;">
+                        <i class="fa fa-question-circle"></i>
+                    </div>
+                    <h4 style="color: #2c3e50; font-weight: 700;">Ouvrages Non Attribués</h4>
+                    <p style="color: #7f8c8d; font-size: 13px;">Livres sans auteur identifié dans le système</p>
+                    <a href="@Url.Action("LivresSansAuteur", "Rapport")" class="btn btn-warning btn-block" style="margin-top: 15px; background: #f39c12; border-color: #f39c12; border-radius: 5px; color: #fff;">
+                        <i class="fa fa-eye"></i> Consulter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-4" style="margin-bottom: 25px;">
+            <div class="panel panel-default" style="border-top: 4px solid #1abc9c; border-radius: 8px; height: 100%;">
+                <div class="panel-body text-center" style="padding: 30px 20px;">
+                    <div style="font-size: 48px; color: #1abc9c; margin-bottom: 15px;">
+                        <i class="fa fa-clipboard-list"></i>
+                    </div>
+                    <h4 style="color: #2c3e50; font-weight: 700;">État du Stock</h4>
+                    <p style="color: #7f8c8d; font-size: 13px;">Inventaire technique avec statistiques globales</p>
+                    <a href="@Url.Action("InventaireLivres", "Rapport")" class="btn btn-success btn-block" style="margin-top: 15px; background: #1abc9c; border-color: #1abc9c; border-radius: 5px;">
+                        <i class="fa fa-eye"></i> Consulter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-4" style="margin-bottom: 25px;">
+            <div class="panel panel-default" style="border-top: 4px solid #34495e; border-radius: 8px; height: 100%;">
+                <div class="panel-body text-center" style="padding: 30px 20px;">
+                    <div style="font-size: 48px; color: #34495e; margin-bottom: 15px;">
+                        <i class="fa fa-chart-bar"></i>
+                    </div>
+                    <h4 style="color: #2c3e50; font-weight: 700;">Bilan par Auteur</h4>
+                    <p style="color: #7f8c8d; font-size: 13px;">Statistiques détaillées : nombre d'ouvrages, pages, moyennes</p>
+                    <a href="@Url.Action("StatistiquesParAuteur", "Rapport")" class="btn btn-default btn-block" style="margin-top: 15px; background: #34495e; color: #fff; border-radius: 5px;">
+                        <i class="fa fa-eye"></i> Consulter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

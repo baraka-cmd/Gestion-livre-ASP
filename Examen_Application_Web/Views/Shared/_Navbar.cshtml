@@ -1,0 +1,50 @@
+﻿<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #2c3e50; border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")" style="color: #ecf0f1; font-weight: bold; display: flex; align-items: center;">
+                <i class="fa fa-book-open" style="margin-right: 10px; color: #3498db;"></i>
+                BIBLIO-TECH <span style="font-size: 0.8em; font-weight: normal; margin-left: 5px;">(UAGO)</span>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-main">
+            <ul class="nav navbar-nav">
+                <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")">
+                    <a href="@Url.Action("Index", "Home")">
+                        <i class="fa fa-chart-line"></i> Dashboard
+                    </a>
+                </li>
+
+                <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Auteur" ? "active" : "")">
+                    <a href="@Url.Action("Index", "Auteur")">
+                        <i class="fa fa-users"></i> Auteurs
+                    </a>
+                </li>
+
+                <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Livre" ? "active" : "")">
+                    <a href="@Url.Action("Index", "Livre")">
+                        <i class="fa fa-book"></i> Livres
+                    </a>
+                </li>
+
+                <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Ecrire" ? "active" : "")">
+                    <a href="@Url.Action("Index", "Ecrire")">
+                        <i class="fa fa-link"></i> Publications
+                    </a>
+                </li>
+
+            
+                <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Rapport" ? "active" : "")">
+                    <a href="@Url.Action("Index", "Rapport")">
+                        <i class="fa fa-file-text"></i> Rapports
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Examen_Application_Web.Models.StatsAuteurViewModel>
+
+@{
+    ViewBag.Title = "Statistiques par Auteur - UAGO";
+}
+
+<h2><i class="fa fa-chart-pie"></i> Statistiques par Auteur</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">Aucune statistique disponible.</div>
+}
+else
+{
+    <div class="row" style="margin-bottom: 20px;">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-body text-center">
+                    <h4>Auteurs Actifs</h4>
+                    <h2>@Model.Count()</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-success">
+                <div class="panel-body text-center">
+                    <h4>Total Livres</h4>
+                    <h2>@Model.Sum(x => x.NombreLivres)</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-warning">
+                <div class="panel-body text-center">
+                    <h4>Total Pages</h4>
+                    <h2>@Model.Sum(x => x.TotalPages)</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Auteur</th>
+                <th>Nombre de Livres</th>
+                <th>Total Pages</th>
+                <th>Moyenne Pages/Livre</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.NomComplet</td>
+                    <td>@item.NombreLivres</td>
+                    <td>@item.TotalPages</td>
+                    <td>@item.MoyennePages</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

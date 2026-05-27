@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Examen_Application_Web.Models.Auteur>
+
+@{
+    ViewBag.Title = "Liste des Auteurs - UAGO";
+}
+
+<h2><i class="fa fa-users"></i> Liste des Auteurs</h2>
+
+<p>
+    <a href="@Url.Action("Index", "Auteur")" class="btn btn-primary">
+        <i class="fa fa-plus"></i> Gérer les Auteurs
+    </a>
+</p>
+
+<p><strong>Total :</strong> @Model.Count() auteur(s)</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Post-Nom</th>
+            <th>Prénom</th>
+            <th>Date Naissance</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>#@item.idAuteur</td>
+                <td>@item.nomAut</td>
+                <td>@item.postnomAut</td>
+                <td>@item.prenomAut</td>
+                <td>@(item.dateNais.HasValue ? item.dateNais.Value.ToString("dd/MM/yyyy") : "---")</td>
+            </tr>
+        }
+    </tbody>
+</table>

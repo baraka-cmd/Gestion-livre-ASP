@@ -1,0 +1,107 @@
+﻿@model Examen_Application_Web.Models.Ecrire
+
+@{
+    ViewBag.Title = "Nouvelle Affectation - Système UAGO";
+}
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-primary shadow-lg" style="margin-top: 30px; border-radius: 8px;">
+            <div class="panel-heading" style="padding: 20px;">
+                <h3 class="panel-title" style="font-size: 20px; font-weight: bold;">
+                    <i class="fa fa-link"></i> Lier un Auteur à un Livre
+                </h3>
+            </div>
+            
+            <div class="panel-body" style="padding: 30px;">
+                @using (Html.BeginForm("Create", "Ecrire", FormMethod.Post, new { id = "frmEcrire" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label style="color: #2c3e50;"><i class="fa fa-book"></i> Sélectionner le Livre :</label>
+                                @Html.DropDownListFor(m => m.idLivre, (SelectList)ViewBag.Livres, "-- Choisir un ouvrage --", new { @class = "form-control", id = "ddlLivre", style = "height: 45px; border-left: 5px solid #3498db;" })
+                                @Html.ValidationMessageFor(m => m.idLivre, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label style="color: #2c3e50;"><i class="fa fa-user"></i> Sélectionner l'Auteur :</label>
+                                @Html.DropDownListFor(m => m.idAuteur, (SelectList)ViewBag.Auteurs, "-- Choisir l'auteur --", new { @class = "form-control", style = "height: 45px; border-left: 5px solid #2ecc71;" })
+                                @Html.ValidationMessageFor(m => m.idAuteur, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label style="color: #2c3e50;"><i class="fa fa-calendar"></i> Date de Publication :</label>
+                                @Html.TextBoxFor(m => m.datPub, new { @class = "form-control", type = "date", style = "height: 45px;" })
+                                @Html.ValidationMessageFor(m => m.datPub, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label style="color: #2c3e50;"><i class="fa fa-copy"></i> Nombre de Pages :</label>
+                                @Html.TextBoxFor(m => m.nbrePag, new { @class = "form-control", id = "txtPages", @readonly = "readonly", style = "height: 45px; background-color: #f8f9fa; font-weight: bold; color: #e67e22;", placeholder = "Auto..." })
+                                <small class="text-muted">Rempli automatiquement selon le livre.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="form-group text-right">
+                        <a href="@Url.Action("Index")" class="btn btn-default btn-lg">
+                            <i class="fa fa-arrow-left"></i> Annuler
+                        </a>
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 200px;">
+                            <i class="fa fa-check-circle"></i> ENREGISTRER
+                        </button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+       
+        document.addEventListener("DOMContentLoaded", function () {
+            var ddlLivre = document.getElementById("ddlLivre");
+            var txtPages = document.getElementById("txtPages");
+
+            ddlLivre.addEventListener("change", function () {
+                var selectedId = this.value;
+                console.log("ID sélectionné:", selectedId);
+
+                if (selectedId) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', '@Url.Action("GetNombrePages", "Livre")' + '?id=' + encodeURIComponent(selectedId), true);
+
+                    xhr.onload = function () {
+                        if (xhr.status === 200) {
+                            console.log("Réponse reçue:", xhr.responseText);
+                            txtPages.value = xhr.responseText;
+                        } else {
+                            console.log("Erreur AJAX - Status:", xhr.status);
+                        }
+                    };
+
+                    xhr.onerror = function () {
+                        console.log("Erreur réseau");
+                    };
+
+                    xhr.send();
+                } else {
+                    txtPages.value = "";
+                }
+            });
+        });
+    </script>
+}

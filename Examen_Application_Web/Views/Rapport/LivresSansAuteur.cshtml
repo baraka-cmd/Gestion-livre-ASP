@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Examen_Application_Web.Models.Livre>
+
+@{
+    ViewBag.Title = "Livres sans Auteur - UAGO";
+}
+
+<h2><i class="fa fa-book-dead"></i> Livres sans Auteur</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-success">
+        <i class="fa fa-check-circle"></i> Tous les livres ont au moins un auteur associé !
+    </div>
+}
+else
+{
+    <p><strong>@Model.Count()</strong> livre(s) sans auteur</p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Titre</th>
+                <th>Pages</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.idLivre</td>
+                    <td>@item.titre</td>
+                    <td>@item.nbrepage</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

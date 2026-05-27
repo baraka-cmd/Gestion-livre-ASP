@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Examen_Application_Web.Models.Ecrire>
+
+@{
+    ViewBag.Title = "Rapport des Publications - UAGO";
+    var groupeParAuteur = Model.GroupBy(x => x.NomAuteur);
+}
+
+<div class="report-container">
+    <div class="report-header-box">
+        <div class="header-info">
+            <h2 class="report-title"><i class="fa fa-file-text-o"></i> RAPPORT DE PUBLICATION</h2>
+            <p class="report-subtitle">État des sorties littéraires par auteur - Système UAGO</p>
+        </div>
+        <div class="header-actions">
+            <button onclick="window.print();" class="btn-print-outline">
+                <i class="fa fa-print"></i> IMPRIMER LE DOCUMENT
+            </button>
+        </div>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="empty-state">
+            <i class="fa fa-folder-open-o"></i>
+            <p>Aucune donnée disponible pour ce rapport.</p>
+        </div>
+    }
+    else
+    {
+        foreach (var groupe in groupeParAuteur)
+        {
+            <div class="author-group">
+                <div class="author-header">
+                    <span class="author-name">
+                        <i class="fa fa-user-circle"></i> @groupe.Key.ToUpper()
+                    </span>
+                    <span class="work-count">@groupe.Count() Ouvrage(s)</span>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="uago-report-table">
+                        <thead>
+                            <tr>
+                                <th>Titre de l'Ouvrage</th>
+                                <th class="text-center">Date Publication</th>
+                                <th class="text-center">Volume (Pages)</th>
+                                <th class="text-right">Mention</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in groupe)
+                            {
+                                <tr>
+                                    <td class="book-title">@item.TitreLivre</td>
+                                    <td class="text-center">
+                                        @(item.datPub.HasValue ? item.datPub.Value.ToString("dd/MM/yyyy") : "---")
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="page-badge">@item.nbrePag p.</span>
+                                    </td>
+                                    <td class="text-right">
+                                        @if (item.nbrePag > 500)
+                                        {
+                                            <span class="tag-major">Tome Majeur</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="tag-standard">Standard</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    }
+
+    <div class="report-footer">
+        <p>Document généré le @DateTime.Now.ToString("dd/MM/yyyy HH:mm") | Confidentialité UAGO</p>
+    </div>
+</div>

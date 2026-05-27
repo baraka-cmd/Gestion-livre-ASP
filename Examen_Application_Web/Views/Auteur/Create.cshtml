@@ -1,0 +1,107 @@
+﻿@model Examen_Application_Web.Models.Auteur
+@{
+    ViewBag.Title = "Nouvel Auteur - Système UAGO";
+}
+
+<div class="desktop-wrapper">
+    
+    <div class="form-header-strip">
+        <label><i class="fa fa-user-plus"></i> ENREGISTREMENT D'UN NOUVEL AUTEUR</label>
+        <span class="status-mode">Mode : Saisie</span>
+    </div>
+
+    <div class="form-content-body">
+        @using (Html.BeginForm("Create", "Auteur", FormMethod.Post, new { id = "frmAuteur" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <fieldset class="group-box">
+                <legend>Informations d'Identité</legend>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-item">
+                            <label>Nom <span class="text-danger">*</span> :</label>
+                            @Html.TextBoxFor(m => m.nomAut, new { @class = "form-control", placeholder = "EX: BARAKA", required = "required" })
+                            @Html.ValidationMessageFor(m => m.nomAut, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-item">
+                            <label>Post-Nom :</label>
+                            @Html.TextBoxFor(m => m.postnomAut, new { @class = "form-control", placeholder = "EX: NTWALI" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-item">
+                            <label>Prénom :</label>
+                            @Html.TextBoxFor(m => m.prenomAut, new { @class = "form-control", placeholder = "EX: Baraka" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:20px;">
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label>Date de Naissance :</label>
+                            @Html.TextBoxFor(m => m.dateNais, new { @class = "form-control", type = "date" })
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label>ID Système :</label>
+                            <input type="text" class="form-control" value="GÉNÉRATION AUTOMATIQUE" readonly style="background:#f8f9fa; border-left: 4px solid #bdc3c7;" />
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="action-tool-strip">
+                <button type="submit" class="btn-action primary">
+                    <i class="fa fa-save"></i> ENREGISTRER L'AUTEUR
+                </button>
+                
+                <button type="reset" class="btn-action default">
+                    <i class="fa fa-refresh"></i> RÉINITIALISER
+                </button>
+
+                <div class="pull-right">
+                    <a href="@Url.Action("Index")" class="btn-action dark">
+                        <i class="fa fa-arrow-left"></i> RETOUR À LA LISTE
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+          
+            $("#ddlLivre").change(function () {
+                var idLivreSelectionne = $(this).val();
+
+                if (idLivreSelectionne) {
+                    
+                    $.ajax({
+                        url: '@Url.Action("GetNombrePages", "Livre")',
+                        type: 'GET',
+                        data: { id: idLivreSelectionne },
+                        success: function (resultat) {
+                            
+                            $("#txtPages").val(resultat);
+                        }
+                    });
+                } else {
+                    $("#txtPages").val(""); 
+                }
+            });
+
+        });
+    </script>
+}

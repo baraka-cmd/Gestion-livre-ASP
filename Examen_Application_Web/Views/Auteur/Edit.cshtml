@@ -1,0 +1,94 @@
+﻿@model Examen_Application_Web.Models.Auteur
+@{
+    ViewBag.Title = "Modification Auteur - Système UAGO";
+}
+
+<div class="desktop-wrapper">
+    <div class="form-header-strip" style="background: linear-gradient(90deg, #d35400 0%, #e67e22 100%);">
+        <label><i class="fa fa-edit"></i> MISE À JOUR DES DONNÉES - AUTEUR N° @Model.idAuteur</label>
+        <span class="status-mode" style="background: #f39c12;">Mode : Édition</span>
+    </div>
+
+    <div class="form-content-body">
+        @using (Html.BeginForm("Edit", "Auteur", FormMethod.Post, new { id = "frmAuteur" }))
+        {
+            @Html.AntiForgeryToken()
+            
+           
+            @Html.HiddenFor(m => m.idAuteur)
+
+            <fieldset class="group-box">
+                <legend>Fiche d'Identité de l'Auteur</legend>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-item">
+                            <label>Nom <span class="text-danger">*</span> :</label>
+                            @Html.TextBoxFor(m => m.nomAut, new { @class = "form-control", placeholder = "NOM", required = "required" })
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-item">
+                            <label>Post-Nom :</label>
+                            @Html.TextBoxFor(m => m.postnomAut, new { @class = "form-control", placeholder = "POST-NOM" })
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-item">
+                            <label>Prénom :</label>
+                            @Html.TextBoxFor(m => m.prenomAut, new { @class = "form-control", placeholder = "PRÉNOM" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:15px;">
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label>Date de Naissance :</label>
+                            
+                            @Html.TextBoxFor(m => m.dateNais, new { @class = "form-control", type = "date", Value = (Model.dateNais.HasValue ? Model.dateNais.Value.ToString("yyyy-MM-dd") : "") })
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-item">
+                            <label>Status de l'enregistrement :</label>
+                            <input type="text" class="form-control" value="ARCHIVE EXISTANTE" readonly style="background:#f4f4f4; border-left: 4px solid #f39c12;" />
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="action-tool-strip">
+                <button type="submit" class="btn-action warning">
+                    <i class="fa fa-sync"></i> APPLIQUER LES MODIFICATIONS
+                </button>
+                
+                <a href="@Url.Action("Index")" class="btn-action default" style="text-decoration:none;">
+                    <i class="fa fa-undo"></i> ANNULER
+                </a>
+
+                <div class="pull-right">
+                    <a href="@Url.Action("Index")" class="btn-action dark" style="text-decoration:none;">
+                        <i class="fa fa-power-off"></i> QUITTER
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+           
+            $("#frmAuteur").on("submit", function () {
+                var $btn = $(".btn-action.warning");
+                $btn.html("<i class='fa fa-spinner fa-spin'></i> TRAITEMENT...");
+            });
+        });
+    </script>
+}

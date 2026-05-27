@@ -1,0 +1,8739 @@
+﻿/* ============================================================
+   BIBLIO-TECH UAGO - STYLES DE BASE
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- 1. RESET & NORMALISATION --- */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* --- 2. CORPS DE LA PAGE --- */
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f0f2f5;
+    padding-top: 70px; /* Espace pour navbar fixe */
+}
+
+/* --- 3. CONTENEUR PRINCIPAL --- */
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* --- 4. TITRES & TYPOGRAPHIE --- */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+h1 { font-size: 28px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+.page-header {
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.page-header small {
+    color: #7f8c8d;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* --- 5. COULEURS THÉMATIQUES UAGO --- */
+/* Palette principale */
+.uago-blue       { color: #3498db; }
+.uago-dark       { color: #2c3e50; }
+.uago-green      { color: #27ae60; }
+.uago-orange     { color: #e67e22; }
+.uago-red        { color: #e74c3c; }
+.uago-purple     { color: #9b59b6; }
+.uago-teal       { color: #1abc9c; }
+.uago-yellow     { color: #f39c12; }
+.uago-gray       { color: #95a5a6; }
+
+/* Backgrounds */
+.bg-blue         { background-color: #3498db; }
+.bg-dark         { background-color: #2c3e50; }
+.bg-green        { background-color: #27ae60; }
+.bg-orange       { background-color: #e67e22; }
+.bg-red          { background-color: #e74c3c; }
+.bg-white        { background-color: #ffffff; }
+.bg-light        { background-color: #f8f9fa; }
+.bg-lighter      { background-color: #f0f2f5; }
+
+/* --- 6. BORDURES --- */
+.border-none     { border: none !important; }
+.border-blue     { border: 1px solid #3498db; }
+.border-dark     { border: 1px solid #2c3e50; }
+.border-light    { border: 1px solid #dcdde1; }
+
+.border-left-blue   { border-left: 4px solid #3498db; }
+.border-left-green  { border-left: 4px solid #27ae60; }
+.border-left-orange { border-left: 4px solid #e67e22; }
+.border-left-red    { border-left: 4px solid #e74c3c; }
+
+.border-top-blue    { border-top: 4px solid #3498db; }
+.border-bottom-blue { border-bottom: 4px solid #3498db; }
+
+/* Arrondis */
+.rounded-4  { border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; }
+.rounded-8  { border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px; }
+.rounded-12 { border-radius: 12px; -webkit-border-radius: 12px; -moz-border-radius: 12px; }
+.rounded-50 { border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; }
+
+/* --- 7. OMBRES --- */
+.shadow-sm {
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-md {
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+    -webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* --- 8. BOUTONS GÉNÉRIQUES --- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* Variantes de couleurs */
+.btn-primary {
+    background-color: #3498db;
+    color: #ffffff;
+}
+.btn-primary:hover {
+    background-color: #2980b9;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+    -moz-box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
+
+.btn-success {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+.btn-success:hover {
+    background-color: #219a52;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+    -moz-box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+}
+
+.btn-warning {
+    background-color: #e67e22;
+    color: #ffffff;
+}
+.btn-warning:hover {
+    background-color: #d35400;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+    -moz-box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+.btn-danger:hover {
+    background-color: #c0392b;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    -moz-box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+
+.btn-dark {
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+.btn-dark:hover {
+    background-color: #1a252f;
+    color: #ffffff;
+}
+
+.btn-default {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+}
+.btn-default:hover {
+    background-color: #bdc3c7;
+    color: #2c3e50;
+}
+
+/* Tailles */
+.btn-lg {
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+.btn-sm {
+    padding: 6px 14px;
+    font-size: 12px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* --- 9. FORMULAIRES --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 42px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -moz-transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -o-transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    outline: none;
+    -webkit-box-shadow: 0 0 8px rgba(52, 152, 219, 0.25);
+    -moz-box-shadow: 0 0 8px rgba(52, 152, 219, 0.25);
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.25);
+}
+
+textarea.form-control {
+    height: auto;
+    min-height: 100px;
+    resize: vertical;
+}
+
+select.form-control {
+    height: 42px;
+    cursor: pointer;
+}
+
+/* Champ lecture seule */
+.form-control[readonly] {
+    background-color: #f8f9fa;
+    color: #7f8c8d;
+    cursor: not-allowed;
+    border-left: 4px solid #bdc3c7;
+}
+
+/* Validation */
+.text-danger {
+    color: #e74c3c;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 5px;
+    display: block;
+}
+
+.text-success {
+    color: #27ae60;
+}
+
+.text-muted {
+    color: #95a5a6;
+}
+
+/* --- 10. TABLEAUX --- */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.table thead th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 14px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    border: none;
+}
+
+.table tbody td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #34495e;
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table-striped tbody tr:nth-child(even):hover {
+    background-color: #e9ecef;
+}
+
+.table-bordered {
+    border: 1px solid #dcdde1;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dcdde1;
+}
+
+/* Table responsive */
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border: 1px solid #dcdde1;
+}
+
+/* --- 11. ALERTES & NOTIFICATIONS --- */
+.alert {
+    padding: 15px 20px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    margin-bottom: 20px;
+    border: none;
+    font-weight: 500;
+}
+
+.alert-success {
+    background-color: #d5f5e3;
+    color: #1e8449;
+    border-left: 5px solid #27ae60;
+}
+
+.alert-info {
+    background-color: #d6eaf8;
+    color: #1a5276;
+    border-left: 5px solid #3498db;
+}
+
+.alert-warning {
+    background-color: #fdebd0;
+    color: #7d6608;
+    border-left: 5px solid #f39c12;
+}
+
+.alert-danger {
+    background-color: #fadbd8;
+    color: #922b21;
+    border-left: 5px solid #e74c3c;
+}
+
+/* --- 12. PANNEAUX (PANELS) --- */
+.panel {
+    background-color: #ffffff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border: 1px solid #dcdde1;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.panel-heading {
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dcdde1;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.panel-body {
+    padding: 20px;
+}
+
+.panel-footer {
+    padding: 12px 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dcdde1;
+}
+
+/* Couleurs panels */
+.panel-primary {
+    border-top: 4px solid #3498db;
+}
+
+.panel-success {
+    border-top: 4px solid #27ae60;
+}
+
+.panel-warning {
+    border-top: 4px solid #e67e22;
+}
+
+.panel-danger {
+    border-top: 4px solid #e74c3c;
+}
+
+/* --- 13. WELLS (ZONES DE CONTENU) --- */
+.well {
+    background-color: #f8f9fa;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.well-white {
+    background-color: #ffffff;
+}
+
+.well-blue {
+    background-color: #ebf5fb;
+    border-color: #3498db;
+}
+
+/* --- 14. BADGES & LABELS --- */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #2c3e50;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    white-space: nowrap;
+}
+
+.badge-primary  { background-color: #3498db; }
+.badge-success  { background-color: #27ae60; }
+.badge-warning  { background-color: #e67e22; }
+.badge-danger   { background-color: #e74c3c; }
+.badge-info     { background-color: #1abc9c; }
+
+.label {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.label-primary  { background-color: #3498db; }
+.label-success  { background-color: #27ae60; }
+.label-warning  { background-color: #e67e22; }
+.label-danger   { background-color: #e74c3c; }
+
+/* --- 15. UTILITAIRES --- */
+.text-center   { text-align: center !important; }
+.text-left     { text-align: left !important; }
+.text-right    { text-align: right !important; }
+.text-justify  { text-align: justify !important; }
+.text-uppercase { text-transform: uppercase; }
+.text-bold     { font-weight: 700; }
+.text-italic   { font-style: italic; }
+
+.pull-left     { float: left !important; }
+.pull-right    { float: right !important; }
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.hidden        { display: none !important; }
+.visible       { display: block !important; }
+
+.margin-top-10    { margin-top: 10px; }
+.margin-top-20    { margin-top: 20px; }
+.margin-top-30    { margin-top: 30px; }
+.margin-bottom-10 { margin-bottom: 10px; }
+.margin-bottom-20 { margin-bottom: 20px; }
+.margin-bottom-30 { margin-bottom: 30px; }
+
+.padding-10   { padding: 10px; }
+.padding-15   { padding: 15px; }
+.padding-20   { padding: 20px; }
+.padding-30   { padding: 30px; }
+
+.width-full   { width: 100%; }
+.width-half   { width: 50%; }
+
+.display-block      { display: block; }
+.display-inline     { display: inline; }
+.display-inline-block { display: inline-block; }
+
+/* --- 16. LISTES --- */
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-inline li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-group-item {
+    display: block;
+    padding: 12px 18px;
+    background-color: #ffffff;
+    border: 1px solid #dcdde1;
+    margin-bottom: -1px;
+    color: #333333;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:first-child {
+    border-radius: 8px 8px 0 0;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+}
+
+.list-group-item:last-child {
+    border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    margin-bottom: 0;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.list-group-item.active {
+    background-color: #3498db;
+    color: #ffffff;
+    border-color: #3498db;
+}
+
+/* --- 17. SEPARATEURS --- */
+hr {
+    border: none;
+    border-top: 1px solid #dcdde1;
+    margin: 20px 0;
+}
+
+hr.thick {
+    border-top-width: 3px;
+}
+
+hr.blue {
+    border-top-color: #3498db;
+}
+
+hr.dashed {
+    border-top-style: dashed;
+}
+
+/* --- 18. PROGRESS BAR --- */
+.progress {
+    height: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #3498db;
+    text-align: center;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    -webkit-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
+    -o-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+}
+
+.progress-bar-success { background-color: #27ae60; }
+.progress-bar-warning { background-color: #e67e22; }
+.progress-bar-danger  { background-color: #e74c3c; }
+
+/* --- 19. MEDIA QUERIES RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .main-container {
+        padding: 15px;
+    }
+
+    .pull-left,
+    .pull-right {
+        float: none !important;
+    }
+
+    .text-center-mobile {
+        text-align: center !important;
+    }
+
+    .hidden-mobile {
+        display: none !important;
+    }
+
+    .table-responsive {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 { font-size: 22px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+
+    .btn-lg {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* --- 20. IMPRESSION --- */
+@media print {
+    body {
+        background-color: #ffffff;
+        padding-top: 0;
+    }
+
+    .navbar,
+    .footer-main,
+    .btn,
+    .btn-print,
+    .btn-print-outline,
+    #backToTop,
+    .header-actions {
+        display: none !important;
+    }
+
+    .main-container {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES DE LA NAVBAR
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   À ajouter dans le fichier Site.css
+   ============================================================ */
+
+/* --- NAVBAR PRINCIPALE --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    min-height: 60px;
+    margin-bottom: 0;
+    border: none;
+}
+
+.navbar-inverse {
+    background-color: #2c3e50;
+    background-image: none;
+    border-bottom: 3px solid #3498db;
+    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* --- CONTAINER DE LA NAVBAR --- */
+.navbar > .container {
+    padding: 0 15px;
+}
+
+/* --- HEADER (Logo + Toggle) --- */
+.navbar-header {
+    float: left;
+    margin: 0;
+}
+
+/* --- BOUTON TOGGLE (Mobile) --- */
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 10px 12px;
+    margin-top: 12px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    cursor: pointer;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #ecf0f1;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    margin: 5px 0;
+}
+
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 4px;
+}
+
+/* --- BRAND (LOGO) --- */
+.navbar-brand {
+    float: left;
+    padding: 16px 20px;
+    font-size: 20px;
+    line-height: 28px;
+    height: 60px;
+    color: #ecf0f1;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar-brand i {
+    color: #3498db;
+    margin-right: 10px;
+    font-size: 22px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover i {
+    -webkit-transform: rotate(-10deg) scale(1.1);
+    -moz-transform: rotate(-10deg) scale(1.1);
+    -ms-transform: rotate(-10deg) scale(1.1);
+    -o-transform: rotate(-10deg) scale(1.1);
+    transform: rotate(-10deg) scale(1.1);
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
+}
+
+.navbar-brand small {
+    font-size: 13px;
+    font-weight: 400;
+    color: #95a5a6;
+    margin-left: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* --- COLLAPSE (Menu principal) --- */
+.navbar-collapse {
+    float: left;
+    max-height: 340px;
+    overflow-x: visible;
+    overflow-y: auto;
+}
+
+/* --- LISTE DE NAVIGATION --- */
+.navbar-nav {
+    float: left;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-nav > li {
+    float: left;
+    position: relative;
+}
+
+/* --- LIENS DE NAVIGATION --- */
+.navbar-nav > li > a {
+    display: block;
+    padding: 18px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #bdc3c7;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    border-bottom: 3px solid transparent;
+}
+
+/* Icône dans les liens */
+.navbar-nav > li > a i {
+    margin-right: 8px;
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Survol des liens */
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: rgba(52, 152, 219, 0.1);
+    border-bottom-color: #3498db;
+}
+
+.navbar-nav > li > a:hover i {
+    color: #3498db;
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+    transform: translateY(-3px);
+}
+
+/* --- ÉLÉMENT ACTIF --- */
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: rgba(52, 152, 219, 0.15);
+    border-bottom-color: #3498db;
+    font-weight: 700;
+}
+
+.navbar-nav > .active > a i {
+    color: #3498db;
+}
+
+/* --- DROPDOWN MENU --- */
+.navbar-nav .dropdown {
+    position: relative;
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    float: left;
+    min-width: 220px;
+    padding: 8px 0;
+    margin: 5px 0 0 0;
+    list-style: none;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-top: 3px solid #3498db;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Flèche du dropdown */
+.navbar-nav .dropdown > a .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 6px;
+    vertical-align: middle;
+    border-top: 5px solid #bdc3c7;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    -webkit-transition: border-top-color 0.3s ease;
+    -moz-transition: border-top-color 0.3s ease;
+    -o-transition: border-top-color 0.3s ease;
+    transition: border-top-color 0.3s ease;
+}
+
+.navbar-nav .dropdown:hover > a .caret {
+    border-top-color: #3498db;
+}
+
+/* Liens du dropdown */
+.navbar-nav .dropdown-menu > li > a {
+    display: block;
+    padding: 10px 20px;
+    color: #34495e;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.navbar-nav .dropdown-menu > li > a:hover,
+.navbar-nav .dropdown-menu > li > a:focus {
+    background-color: #3498db;
+    color: #ffffff;
+    padding-left: 25px;
+}
+
+.navbar-nav .dropdown-menu > li > a i {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+}
+
+/* Séparateur dropdown */
+.navbar-nav .dropdown-menu .divider {
+    height: 1px;
+    margin: 8px 0;
+    overflow: hidden;
+    background-color: #ecf0f1;
+}
+
+/* --- RESPONSIVE : TABLETTE ET MOBILE --- */
+@media screen and (max-width: 768px) {
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        float: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0 15px;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+
+    .navbar-nav {
+        float: none;
+        margin: 10px 0;
+    }
+
+    .navbar-nav > li {
+        float: none;
+    }
+
+    .navbar-nav > li > a {
+        padding: 12px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .navbar-nav .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.15);
+        border: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+    }
+
+    .navbar-nav .dropdown-menu > li > a {
+        color: #bdc3c7;
+        padding-left: 40px;
+    }
+
+    .navbar-nav .dropdown-menu > li > a:hover {
+        color: #ffffff;
+        background-color: rgba(52, 152, 219, 0.2);
+    }
+
+    .navbar-nav .dropdown-menu .divider {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar-brand {
+        font-size: 16px;
+        padding: 18px 10px;
+    }
+
+    .navbar-brand i {
+        font-size: 18px;
+    }
+
+    .navbar-brand small {
+        display: none;
+    }
+}
+
+/* --- ANIMATION APPARITION DROPDOWN --- */
+@-webkit-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -moz-transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    -webkit-animation: fadeInDown 0.3s ease;
+    -moz-animation: fadeInDown 0.3s ease;
+    animation: fadeInDown 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES DU FOOTER
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- STRUCTURE PRINCIPALE DU FOOTER --- */
+.footer-main {
+    background-color: #1a252f;
+    color: #bdc3c7;
+    padding: 50px 0 0 0;
+    margin-top: 40px;
+    border-top: 4px solid #3498db;
+    font-size: 14px;
+}
+
+.footer-top {
+    display: table;
+    width: 100%;
+    margin: 0;
+}
+
+.footer-top .footer-col {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+    padding: 0 20px 30px 20px;
+}
+
+/* --- TITRES DES COLONNES --- */
+.footer-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-title:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #3498db;
+}
+
+.footer-title i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* --- TEXTES --- */
+.footer-text {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #95a5a6;
+}
+
+.footer-location,
+.footer-contact {
+    margin-bottom: 8px;
+    color: #95a5a6;
+}
+
+.footer-location i,
+.footer-contact i {
+    color: #3498db;
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+}
+
+/* --- LIENS --- */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links li a {
+    color: #95a5a6;
+    text-decoration: none;
+    display: block;
+    padding: 6px 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-links li a:hover {
+    color: #3498db;
+    padding-left: 8px;
+    text-decoration: none;
+    border-bottom-color: rgba(52, 152, 219, 0.3);
+}
+
+.footer-links li a i {
+    margin-right: 8px;
+    font-size: 12px;
+    -webkit-transition: margin-right 0.3s ease;
+    -moz-transition: margin-right 0.3s ease;
+    -o-transition: margin-right 0.3s ease;
+    transition: margin-right 0.3s ease;
+}
+
+.footer-links li a:hover i {
+    margin-right: 12px;
+    color: #3498db;
+}
+
+/* --- LISTE D'INFORMATIONS --- */
+.footer-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.footer-info-list li {
+    margin-bottom: 10px;
+    color: #95a5a6;
+}
+
+.footer-info-list li i {
+    color: #3498db;
+    margin-right: 10px;
+    width: 16px;
+    text-align: center;
+}
+
+/* --- BADGES --- */
+.footer-badges {
+    margin-top: 10px;
+}
+
+.footer-badges .badge {
+    display: inline-block;
+    margin-right: 6px;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.footer-badges .badge-primary {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.footer-badges .badge-success {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
+.footer-badges .badge-info {
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+
+/* --- SÉPARATEUR --- */
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 0 0 20px 0;
+}
+
+/* --- BAS DU FOOTER --- */
+.footer-bottom {
+    padding: 0 20px 20px 20px;
+    margin: 0;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+.copyright strong {
+    color: #ecf0f1;
+}
+
+.footer-bottom-right {
+    text-align: right;
+}
+
+.footer-version {
+    margin: 0;
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+.footer-version i {
+    color: #3498db;
+    margin-right: 5px;
+}
+
+/* --- BOUTON RETOUR EN HAUT --- */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    width: 45px;
+    height: 45px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 45px;
+    -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #2980b9;
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-box-shadow: 0 6px 20px rgba(52, 152, 219, 0.5);
+    -moz-box-shadow: 0 6px 20px rgba(52, 152, 219, 0.5);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.5);
+}
+
+#backToTop:active {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .footer-top {
+        display: block;
+    }
+
+    .footer-top .footer-col {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+
+    .footer-bottom-right {
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    #backToTop {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-main {
+        padding-top: 30px;
+    }
+
+    .footer-title {
+        font-size: 14px;
+    }
+
+    .copyright,
+    .footer-version {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES PAGE INDEX AUTEURS
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- EN-TÊTE D'ACTION --- */
+.action-header {
+    background-color: #ffffff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid #3498db;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.action-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.action-header h2 i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* --- BOUTON AJOUTER --- */
+.btn-success {
+    background-color: #27ae60;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    -moz-box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #219a52;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+    -moz-box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+.btn-success:active {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* --- ZONE DE RECHERCHE --- */
+.well {
+    background-color: #ffffff;
+    border: 1px solid #dcdde1;
+    border-left: 5px solid #3498db;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- INPUT GROUP (RECHERCHE) --- */
+.input-group {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+}
+
+.input-group-addon {
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #3498db;
+    border: 1px solid #3498db;
+    border-radius: 6px 0 0 6px;
+    -webkit-border-radius: 6px 0 0 6px;
+    -moz-border-radius: 6px 0 0 6px;
+}
+
+.input-group .form-control {
+    display: table-cell;
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 0 6px 6px 0;
+    -webkit-border-radius: 0 6px 6px 0;
+    -moz-border-radius: 0 6px 6px 0;
+    border: 1px solid #dcdde1;
+    border-left: none;
+    height: 42px;
+}
+
+.input-group .form-control:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* --- LABEL TOTAL --- */
+.label-primary {
+    background-color: #3498db;
+    color: #ffffff;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+
+.label-primary i {
+    margin-right: 6px;
+}
+
+/* --- TABLEAU --- */
+.table-responsive {
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* En-tête du tableau */
+#authorsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+#authorsTable thead {
+    background-color: #2c3e50;
+}
+
+#authorsTable thead th {
+    color: #ffffff;
+    padding: 15px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    border: none;
+    vertical-align: middle;
+}
+
+#authorsTable thead th:first-child {
+    text-align: center;
+    width: 70px;
+}
+
+/* Corps du tableau */
+#authorsTable tbody td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #34495e;
+    vertical-align: middle;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+
+#authorsTable tbody tr:hover {
+    background-color: #f4f8fb;
+}
+
+#authorsTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Cellule ID */
+#authorsTable tbody td:first-child {
+    text-align: center;
+    background-color: #f8f9fa;
+    font-weight: 700;
+    color: #2980b9;
+    border-right: 1px solid #ecf0f1;
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+/* Colonne Nom */
+#authorsTable tbody td:nth-child(2) {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* Colonne Post-Nom */
+#authorsTable tbody td:nth-child(3) {
+    text-transform: uppercase;
+    color: #7f8c8d;
+}
+
+/* Colonne Prénom */
+#authorsTable tbody td:nth-child(4) {
+    color: #2980b9;
+    font-weight: 500;
+}
+
+/* Colonne Date */
+#authorsTable tbody td:nth-child(5) i {
+    color: #bdc3c7;
+    margin-right: 5px;
+}
+
+/* --- BOUTONS D'ACTION --- */
+.btn-group {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.btn-sm {
+    padding: 7px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.btn-warning {
+    background-color: #e67e22;
+    color: #ffffff;
+}
+
+.btn-warning:hover {
+    background-color: #d35400;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    transform: translateY(-1px);
+    -webkit-box-shadow: 0 3px 10px rgba(230, 126, 34, 0.3);
+    -moz-box-shadow: 0 3px 10px rgba(230, 126, 34, 0.3);
+    box-shadow: 0 3px 10px rgba(230, 126, 34, 0.3);
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    transform: translateY(-1px);
+    -webkit-box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+    -moz-box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+}
+
+.btn-warning:active,
+.btn-danger:active {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* --- ÉTAT VIDE --- */
+#authorsTable tbody td[colspan] {
+    text-align: center;
+    padding: 40px !important;
+    color: #95a5a6;
+    font-size: 15px;
+}
+
+#authorsTable tbody td[colspan] i {
+    display: block;
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #bdc3c7;
+}
+
+/* --- ALERTE AUCUN RÉSULTAT --- */
+#noResult {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #fef9e7;
+    color: #7d6608;
+    border-left: 5px solid #f39c12;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#noResult i {
+    margin-right: 8px;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .action-header {
+        display: block !important;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .action-header h2 {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .action-header .btn-success {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .well .row .col-md-6 {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .label-primary {
+        display: block;
+        text-align: center;
+    }
+
+    #authorsTable thead th {
+        padding: 10px 8px;
+        font-size: 10px;
+    }
+
+    #authorsTable tbody td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    #authorsTable thead th:nth-child(4),
+    #authorsTable tbody td:nth-child(4),
+    #authorsTable thead th:nth-child(5),
+    #authorsTable tbody td:nth-child(5) {
+        display: none;
+    }
+
+    .btn-sm {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #authorsTable thead th:nth-child(3),
+    #authorsTable tbody td:nth-child(3) {
+        display: none;
+    }
+
+    .btn-group {
+        display: block;
+    }
+
+    .btn-group .btn-sm {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES FORMULAIRE AUTEUR (CREATE / EDIT)
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- CONTENEUR PRINCIPAL --- */
+.desktop-wrapper {
+    background-color: #ffffff;
+    border: 1px solid #d5dbdb;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 25px auto;
+    max-width: 1000px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- BARRE D'EN-TÊTE --- */
+.form-header-strip {
+    background-color: #2c3e50;
+    background-image: -webkit-linear-gradient(left, #2c3e50, #34495e);
+    background-image: -moz-linear-gradient(left, #2c3e50, #34495e);
+    background-image: -o-linear-gradient(left, #2c3e50, #34495e);
+    background-image: linear-gradient(to right, #2c3e50, #34495e);
+    color: #ffffff;
+    padding: 18px 25px;
+    border-bottom: 4px solid #3498db;
+}
+
+.form-header-strip label {
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    display: inline-block;
+}
+
+.form-header-strip label i {
+    color: #3498db;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.status-mode {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ecf0f1;
+    padding: 5px 14px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- CORPS DU FORMULAIRE --- */
+.form-content-body {
+    padding: 35px;
+    background-color: #ffffff;
+}
+
+/* --- GROUPE DE CHAMPS (FIELDSET) --- */
+.group-box {
+    border: 1px solid #e0e6e8;
+    border-left: 5px solid #3498db;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    padding: 30px 25px 20px 25px;
+    margin-bottom: 25px;
+    background-color: #fafbfd;
+    position: relative;
+}
+
+.group-box legend {
+    width: auto;
+    padding: 0 15px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #2980b9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #ffffff;
+    border: 1px solid #e0e6e8;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+/* --- ÉLÉMENTS DE FORMULAIRE --- */
+.form-item {
+    margin-bottom: 22px;
+}
+
+.form-item label {
+    display: block;
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-item label .text-danger {
+    color: #e74c3c;
+    font-size: 15px;
+}
+
+/* --- CHAMPS DE SAISIE --- */
+.form-control {
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #2c3e50;
+    background-color: #fefefe;
+    border: 2px solid #dcdde1;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    background-color: #ffffff;
+    outline: none;
+    -webkit-box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    -moz-box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+/* Placeholder */
+.form-control::-webkit-input-placeholder {
+    color: #bdc3c7;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.form-control::-moz-placeholder {
+    color: #bdc3c7;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #bdc3c7;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/* Champ lecture seule */
+.form-control[readonly] {
+    background-color: #f5f6fa !important;
+    color: #7f8c8d;
+    cursor: not-allowed;
+    border-left: 4px solid #bdc3c7;
+    font-weight: 600;
+}
+
+/* Champ date */
+.form-control[type="date"] {
+    cursor: pointer;
+}
+
+/* --- MESSAGE DE VALIDATION --- */
+.text-danger {
+    display: block;
+    color: #e74c3c;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+/* --- BARRE D'ACTIONS --- */
+.action-tool-strip {
+    background-color: #f8f9fa;
+    padding: 25px 35px;
+    border-top: 1px solid #e0e6e8;
+    display: block;
+}
+
+.action-tool-strip:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.action-tool-strip .pull-right {
+    float: right;
+}
+
+/* --- BOUTONS D'ACTION --- */
+.btn-action {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 12px 25px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.btn-action i {
+    margin-right: 8px;
+}
+
+.btn-action:hover {
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+.btn-action:active {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* Bouton Primaire (Enregistrer) */
+.btn-action.primary {
+    background-color: #27ae60;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 0 #1e8449;
+    -moz-box-shadow: 0 4px 0 #1e8449;
+    box-shadow: 0 4px 0 #1e8449;
+}
+
+.btn-action.primary:hover {
+    background-color: #2ecc71;
+    -webkit-box-shadow: 0 6px 0 #1e8449;
+    -moz-box-shadow: 0 6px 0 #1e8449;
+    box-shadow: 0 6px 0 #1e8449;
+    color: #ffffff;
+}
+
+/* Bouton Défaut (Réinitialiser) */
+.btn-action.default {
+    background-color: #95a5a6;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 0 #7f8c8d;
+    -moz-box-shadow: 0 4px 0 #7f8c8d;
+    box-shadow: 0 4px 0 #7f8c8d;
+}
+
+.btn-action.default:hover {
+    background-color: #a0b0b0;
+    -webkit-box-shadow: 0 6px 0 #7f8c8d;
+    -moz-box-shadow: 0 6px 0 #7f8c8d;
+    box-shadow: 0 6px 0 #7f8c8d;
+    color: #ffffff;
+}
+
+/* Bouton Sombre (Retour) */
+.btn-action.dark {
+    background-color: #2c3e50;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 0 #1a252f;
+    -moz-box-shadow: 0 4px 0 #1a252f;
+    box-shadow: 0 4px 0 #1a252f;
+}
+
+.btn-action.dark:hover {
+    background-color: #34495e;
+    -webkit-box-shadow: 0 6px 0 #1a252f;
+    -moz-box-shadow: 0 6px 0 #1a252f;
+    box-shadow: 0 6px 0 #1a252f;
+    color: #ffffff;
+}
+
+/* --- GRILLE (ROW / COL) --- */
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-md-4 {
+    float: left;
+    width: 33.3333%;
+    padding: 0 15px;
+}
+
+.col-md-6 {
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+}
+
+.col-md-12 {
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .desktop-wrapper {
+        margin: 10px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+    }
+
+    .form-content-body {
+        padding: 20px;
+    }
+
+    .form-header-strip {
+        padding: 15px;
+    }
+
+    .form-header-strip label {
+        font-size: 13px;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .status-mode {
+        display: inline-block;
+        font-size: 10px;
+    }
+
+    .col-md-4,
+    .col-md-6 {
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .group-box {
+        padding: 20px 15px 15px 15px;
+    }
+
+    /* Boutons empilés sur mobile */
+    .action-tool-strip .btn-action {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .action-tool-strip .pull-right {
+        float: none !important;
+        display: block;
+    }
+
+    .action-tool-strip .pull-right .btn-action {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-header-strip label {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    .form-item label {
+        font-size: 11px;
+    }
+
+    .form-control {
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .btn-action {
+        padding: 10px 18px;
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES FORMULAIRE AUTEUR ÉDITION
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- BARRE D'EN-TÊTE ÉDITION (ORANGE) --- */
+.form-header-strip-edit {
+    background-color: #d35400;
+    background-image: -webkit-linear-gradient(left, #d35400, #e67e22);
+    background-image: -moz-linear-gradient(left, #d35400, #e67e22);
+    background-image: -o-linear-gradient(left, #d35400, #e67e22);
+    background-image: linear-gradient(to right, #d35400, #e67e22);
+    color: #ffffff;
+    padding: 18px 25px;
+    border-bottom: 4px solid #f39c12;
+}
+
+.form-header-strip-edit label {
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    display: inline-block;
+}
+
+.form-header-strip-edit label i {
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 18px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Badge mode édition */
+.status-mode-edit {
+    background-color: #f39c12;
+    color: #ffffff;
+    padding: 5px 14px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- CHAMP VERROUILLÉ ÉDITION --- */
+.form-control-locked {
+    background-color: #fdf2e9 !important;
+    color: #7f5539;
+    cursor: not-allowed;
+    border-left: 4px solid #f39c12 !important;
+    font-weight: 600;
+}
+
+/* --- BOUTON WARNING (APPLIQUER MODIFICATIONS) --- */
+.btn-action.warning {
+    background-color: #e67e22;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 0 #a04000;
+    -moz-box-shadow: 0 4px 0 #a04000;
+    box-shadow: 0 4px 0 #a04000;
+}
+
+.btn-action.warning:hover {
+    background-color: #f39c12;
+    -webkit-box-shadow: 0 6px 0 #a04000;
+    -moz-box-shadow: 0 6px 0 #a04000;
+    box-shadow: 0 6px 0 #a04000;
+    color: #ffffff;
+}
+
+.btn-action.warning:active {
+    -webkit-box-shadow: 0 2px 0 #a04000;
+    -moz-box-shadow: 0 2px 0 #a04000;
+    box-shadow: 0 2px 0 #a04000;
+}
+
+/* Effet spinner au clic */
+.btn-action.warning.processing {
+    background-color: #d35400;
+    cursor: wait;
+    pointer-events: none;
+}
+
+/* --- BOUTON RETOUR (QUITTER) --- */
+.btn-action.dark {
+    background-color: #2c3e50;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 0 #1a252f;
+    -moz-box-shadow: 0 4px 0 #1a252f;
+    box-shadow: 0 4px 0 #1a252f;
+}
+
+.btn-action.dark:hover {
+    background-color: #34495e;
+    -webkit-box-shadow: 0 6px 0 #1a252f;
+    -moz-box-shadow: 0 6px 0 #1a252f;
+    box-shadow: 0 6px 0 #1a252f;
+    color: #ffffff;
+}
+
+/* --- BOUTON ANNULER --- */
+.btn-action.default {
+    background-color: #95a5a6;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 0 #7f8c8d;
+    -moz-box-shadow: 0 4px 0 #7f8c8d;
+    box-shadow: 0 4px 0 #7f8c8d;
+}
+
+.btn-action.default:hover {
+    background-color: #a0b0b0;
+    -webkit-box-shadow: 0 6px 0 #7f8c8d;
+    -moz-box-shadow: 0 6px 0 #7f8c8d;
+    box-shadow: 0 6px 0 #7f8c8d;
+    color: #ffffff;
+}
+
+/* --- ANIMATION ICÔNE SPINNER --- */
+@-webkit-keyframes fa-spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(359deg); }
+}
+
+@-moz-keyframes fa-spin {
+    0% { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(359deg); }
+}
+
+@keyframes fa-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(359deg); }
+}
+
+.fa-spin {
+    -webkit-animation: fa-spin 1s infinite linear;
+    -moz-animation: fa-spin 1s infinite linear;
+    animation: fa-spin 1s infinite linear;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .form-header-strip-edit {
+        padding: 15px;
+    }
+
+    .form-header-strip-edit label {
+        font-size: 13px;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .status-mode-edit {
+        display: inline-block;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-header-strip-edit label {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    .btn-action.warning,
+    .btn-action.default,
+    .btn-action.dark {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES PAGE INDEX PUBLICATIONS (ECRIRE)
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- EN-TÊTE D'ACTION --- */
+.action-header {
+    background-color: #ffffff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid #3498db;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.action-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.action-header h2 i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* --- BOUTON NOUVELLE AFFECTATION --- */
+.btn-primary {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    -moz-box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    -moz-box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.btn-primary:active {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* --- CARTE STATISTIQUE TOTAL --- */
+.well-stat {
+    background-color: #ffffff;
+    border-left: 5px solid #3498db;
+    padding: 18px 20px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.well-stat small {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #95a5a6;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.well-stat h3 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: #2c3e50;
+}
+
+/* --- BARRE DE RECHERCHE --- */
+.well-search {
+    background-color: #ffffff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Input group */
+.input-group {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+}
+
+.input-group-addon {
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #3498db;
+    border: 1px solid #3498db;
+    border-radius: 6px 0 0 6px;
+    -webkit-border-radius: 6px 0 0 6px;
+    -moz-border-radius: 6px 0 0 6px;
+}
+
+.input-group .form-control {
+    display: table-cell;
+    width: 100%;
+    height: 42px;
+    margin-bottom: 0;
+    border-radius: 0 6px 6px 0;
+    -webkit-border-radius: 0 6px 6px 0;
+    -moz-border-radius: 0 6px 6px 0;
+    border: 1px solid #dcdde1;
+    border-left: none;
+    font-size: 14px;
+}
+
+.input-group .form-control:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* --- TABLEAU --- */
+.table-responsive {
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+/* En-tête */
+#tblEcrire {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+#tblEcrire thead {
+    background-color: #2c3e50;
+}
+
+#tblEcrire thead th {
+    color: #ffffff;
+    padding: 15px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    border: none;
+    vertical-align: middle;
+}
+
+#tblEcrire thead th:first-child {
+    padding-left: 20px;
+}
+
+/* Corps */
+#tblEcrire tbody td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #34495e;
+    vertical-align: middle;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+
+#tblEcrire tbody td:first-child {
+    padding-left: 20px;
+}
+
+#tblEcrire tbody tr:hover {
+    background-color: #f4f8fb;
+}
+
+#tblEcrire tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Colonne Titre */
+#tblEcrire tbody td:first-child {
+    font-weight: 600;
+    color: #2980b9;
+}
+
+#tblEcrire tbody td:first-child i {
+    color: #3498db;
+    margin-right: 8px;
+}
+
+/* Colonne Auteur */
+#tblEcrire tbody td:nth-child(2) {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* Colonne Pages */
+#tblEcrire tbody td:nth-child(3) {
+    text-align: center;
+}
+
+/* --- BADGE NOMBRE DE PAGES --- */
+.badge-pages {
+    display: inline-block;
+    background-color: #e67e22;
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    white-space: nowrap;
+}
+
+/* Colonne Date */
+#tblEcrire tbody td:nth-child(4) i {
+    color: #bdc3c7;
+    margin-right: 6px;
+}
+
+/* --- BOUTONS D'ACTION --- */
+.btn-group-sm {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.btn-group-sm .btn {
+    display: inline-block;
+    padding: 7px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 2px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.btn-warning {
+    background-color: #e67e22;
+    color: #ffffff;
+}
+
+.btn-warning:hover {
+    background-color: #d35400;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    transform: translateY(-1px);
+    -webkit-box-shadow: 0 3px 10px rgba(230, 126, 34, 0.3);
+    -moz-box-shadow: 0 3px 10px rgba(230, 126, 34, 0.3);
+    box-shadow: 0 3px 10px rgba(230, 126, 34, 0.3);
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    transform: translateY(-1px);
+    -webkit-box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+    -moz-box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+}
+
+/* --- ÉTAT VIDE --- */
+#tblEcrire tbody td[colspan] {
+    text-align: center;
+    padding: 40px !important;
+    color: #95a5a6;
+    font-size: 15px;
+}
+
+#tblEcrire tbody td[colspan] i {
+    display: block;
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #bdc3c7;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .action-header {
+        display: block !important;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .action-header h2 {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .action-header .btn-primary {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .col-md-4,
+    .col-md-8 {
+        float: none;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 0;
+    }
+
+    #tblEcrire thead th {
+        padding: 10px 8px;
+        font-size: 10px;
+    }
+
+    #tblEcrire tbody td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    /* Masquer colonne Date sur tablette */
+    #tblEcrire thead th:nth-child(4),
+    #tblEcrire tbody td:nth-child(4) {
+        display: none;
+    }
+
+    .btn-group-sm .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Masquer aussi Pages sur mobile */
+    #tblEcrire thead th:nth-child(3),
+    #tblEcrire tbody td:nth-child(3) {
+        display: none;
+    }
+
+    .well-stat h3 {
+        font-size: 22px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES FORMULAIRE NOUVELLE PUBLICATION
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- PANNEAU PRINCIPAL --- */
+.panel-publication {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    overflow: hidden;
+    margin-top: 30px;
+    -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* --- EN-TÊTE DU PANNEAU --- */
+.panel-publication .panel-heading {
+    background-color: #2c3e50;
+    background-image: -webkit-linear-gradient(135deg, #2c3e50, #34495e);
+    background-image: -moz-linear-gradient(135deg, #2c3e50, #34495e);
+    background-image: -o-linear-gradient(135deg, #2c3e50, #34495e);
+    background-image: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ffffff;
+    padding: 22px 30px;
+    border: none;
+    border-bottom: 4px solid #3498db;
+}
+
+.panel-publication .panel-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.panel-publication .panel-title i {
+    color: #3498db;
+    margin-right: 12px;
+    font-size: 22px;
+}
+
+/* --- CORPS DU PANNEAU --- */
+.panel-publication .panel-body {
+    padding: 35px;
+    background-color: #ffffff;
+}
+
+/* --- DROPDOWN (SELECT) --- */
+select.form-control {
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #2c3e50;
+    background-color: #ffffff;
+    border: 2px solid #dcdde1;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233498db'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+select.form-control:focus {
+    border-color: #3498db;
+    outline: none;
+    -webkit-box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    -moz-box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+/* Dropdown Livre - bordure gauche bleue */
+select.form-control.dropdown-livre {
+    border-left: 5px solid #3498db;
+}
+
+/* Dropdown Auteur - bordure gauche verte */
+select.form-control.dropdown-auteur {
+    border-left: 5px solid #2ecc71;
+}
+
+/* --- CHAMP DATE --- */
+input[type="date"].form-control {
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #2c3e50;
+    background-color: #ffffff;
+    border: 2px solid #dcdde1;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+input[type="date"].form-control:focus {
+    border-color: #3498db;
+    outline: none;
+    -webkit-box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    -moz-box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+/* --- CHAMP PAGES (LECTURE SEULE) --- */
+input.form-control.readonly-pages {
+    background-color: #fef9f4 !important;
+    color: #d35400 !important;
+    font-weight: 700 !important;
+    border-left: 5px solid #e67e22 !important;
+    cursor: not-allowed !important;
+    font-size: 15px;
+    text-align: center;
+}
+
+input.form-control.readonly-pages::-webkit-input-placeholder {
+    color: #d35400;
+    font-style: italic;
+}
+
+input.form-control.readonly-pages::-moz-placeholder {
+    color: #d35400;
+    font-style: italic;
+}
+
+input.form-control.readonly-pages:-ms-input-placeholder {
+    color: #d35400;
+    font-style: italic;
+}
+
+/* --- TEXTE D'AIDE --- */
+.help-text {
+    display: block;
+    font-size: 12px;
+    color: #95a5a6;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+/* --- SÉPARATEUR --- */
+hr {
+    border: none;
+    border-top: 2px solid #f1f2f6;
+    margin: 30px 0;
+}
+
+/* --- BOUTONS DU FORMULAIRE --- */
+.btn-publication {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-publication i {
+    margin-right: 8px;
+}
+
+/* Bouton Annuler */
+.btn-publication.btn-cancel {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+}
+
+.btn-publication.btn-cancel:hover {
+    background-color: #bdc3c7;
+    color: #2c3e50;
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+/* Bouton Enregistrer */
+.btn-publication.btn-save {
+    background-color: #27ae60;
+    color: #ffffff;
+    min-width: 200px;
+    text-align: center;
+    -webkit-box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    -moz-box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+.btn-publication.btn-save:hover {
+    background-color: #2ecc71;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+    -moz-box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+.btn-publication.btn-save:active {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* --- LABELS --- */
+.form-group label {
+    display: block;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group label i {
+    margin-right: 8px;
+}
+
+/* Label Livre */
+.form-group label.label-livre i {
+    color: #3498db;
+}
+
+/* Label Auteur */
+.form-group label.label-auteur i {
+    color: #2ecc71;
+}
+
+/* Label Date */
+.form-group label.label-date i {
+    color: #9b59b6;
+}
+
+/* Label Pages */
+.form-group label.label-pages i {
+    color: #e67e22;
+}
+
+/* --- COLONNES DU FORMULAIRE --- */
+.col-md-12 {
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.col-md-6 {
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+}
+
+.col-md-8 {
+    float: left;
+    width: 66.6667%;
+    padding: 0 15px;
+}
+
+.col-md-offset-2 {
+    margin-left: 16.6667%;
+}
+
+/* --- ALIGNEMENT --- */
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- VALIDATION --- */
+.text-danger {
+    display: block;
+    color: #e74c3c;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+/* --- ESPACEMENT --- */
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+/* --- ANIMATION APPARITION --- */
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -moz-transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.panel-publication {
+    -webkit-animation: fadeInUp 0.5s ease;
+    -moz-animation: fadeInUp 0.5s ease;
+    animation: fadeInUp 0.5s ease;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .col-md-8 {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .col-md-offset-2 {
+        margin-left: 0;
+    }
+
+    .col-md-6 {
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .panel-publication {
+        margin-top: 15px;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+    }
+
+    .panel-publication .panel-heading {
+        padding: 15px 20px;
+    }
+
+    .panel-publication .panel-title {
+        font-size: 17px;
+    }
+
+    .panel-publication .panel-body {
+        padding: 20px;
+    }
+
+    .btn-publication {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        min-width: 0;
+    }
+
+    .text-right {
+        text-align: left;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .panel-publication .panel-title {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    select.form-control,
+    input[type="date"].form-control,
+    input.form-control.readonly-pages {
+        height: 42px;
+        font-size: 13px;
+    }
+
+    .form-group label {
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES FORMULAIRE MODIFIER PUBLICATION
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- PANNEAU ÉDITION --- */
+.panel-edit {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    overflow: hidden;
+    margin-top: 30px;
+    -webkit-box-shadow: 0 10px 35px rgba(230, 126, 34, 0.15);
+    -moz-box-shadow: 0 10px 35px rgba(230, 126, 34, 0.15);
+    box-shadow: 0 10px 35px rgba(230, 126, 34, 0.15);
+    border-top: 4px solid #f39c12;
+}
+
+/* --- EN-TÊTE ÉDITION --- */
+.panel-edit .panel-heading {
+    background-color: #2c3e50;
+    background-image: -webkit-linear-gradient(135deg, #d35400, #2c3e50);
+    background-image: -moz-linear-gradient(135deg, #d35400, #2c3e50);
+    background-image: -o-linear-gradient(135deg, #d35400, #2c3e50);
+    background-image: linear-gradient(135deg, #d35400, #2c3e50);
+    color: #ffffff;
+    padding: 22px 30px;
+    border: none;
+    border-bottom: 3px solid #f39c12;
+}
+
+.panel-edit .panel-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 5px 0;
+}
+
+.panel-edit .panel-title i {
+    color: #f39c12;
+    margin-right: 12px;
+    font-size: 22px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.panel-edit .panel-subtitle {
+    display: block;
+    font-size: 12px;
+    color: #bdc3c7;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* --- CORPS DU PANNEAU --- */
+.panel-edit .panel-body {
+    padding: 35px;
+    background-color: #fefefe;
+}
+
+/* --- DROPDOWN SÉLECTION --- */
+select.form-control {
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #2c3e50;
+    background-color: #ffffff;
+    border: 2px solid #dcdde1;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e67e22'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+select.form-control:focus {
+    border-color: #e67e22;
+    outline: none;
+    -webkit-box-shadow: 0 0 10px rgba(230, 126, 34, 0.25);
+    -moz-box-shadow: 0 0 10px rgba(230, 126, 34, 0.25);
+    box-shadow: 0 0 10px rgba(230, 126, 34, 0.25);
+}
+
+/* Dropdown Livre */
+select.form-control.edit-livre {
+    border-left: 5px solid #3498db;
+}
+
+/* Dropdown Auteur */
+select.form-control.edit-auteur {
+    border-left: 5px solid #2ecc71;
+}
+
+/* --- CHAMP DATE --- */
+input[type="date"].form-control {
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #2c3e50;
+    background-color: #ffffff;
+    border: 2px solid #dcdde1;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+input[type="date"].form-control:focus {
+    border-color: #e67e22;
+    outline: none;
+    -webkit-box-shadow: 0 0 10px rgba(230, 126, 34, 0.25);
+    -moz-box-shadow: 0 0 10px rgba(230, 126, 34, 0.25);
+    box-shadow: 0 0 10px rgba(230, 126, 34, 0.25);
+}
+
+/* --- CHAMP PAGES ÉDITION --- */
+input.form-control.edit-pages {
+    background-color: #fef9f4;
+    color: #2c3e50;
+    font-weight: 700;
+    border-left: 5px solid #e67e22;
+    font-size: 15px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+input.form-control.edit-pages:focus {
+    border-color: #e67e22;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 10px rgba(230, 126, 34, 0.25);
+    -moz-box-shadow: 0 0 10px rgba(230, 126, 34, 0.25);
+    box-shadow: 0 0 10px rgba(230, 126, 34, 0.25);
+}
+
+/* --- TEXTE D'AIDE --- */
+.help-text {
+    display: block;
+    font-size: 12px;
+    color: #95a5a6;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+/* --- LABELS --- */
+.form-group label {
+    display: block;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.form-group label i {
+    margin-right: 8px;
+}
+
+/* --- SÉPARATEUR --- */
+.form-divider {
+    border: none;
+    border-top: 2px solid #f1f2f6;
+    margin: 30px 0;
+}
+
+/* --- BARRE D'ACTIONS --- */
+.form-actions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #f1f2f6;
+    text-align: right;
+}
+
+.form-actions:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- BOUTONS ÉDITION --- */
+.btn-edit {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-edit i {
+    margin-right: 8px;
+}
+
+/* Bouton Annuler */
+.btn-edit.btn-cancel {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+}
+
+.btn-edit.btn-cancel:hover {
+    background-color: #bdc3c7;
+    color: #2c3e50;
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+/* Bouton Mettre à Jour */
+.btn-edit.btn-update {
+    background-color: #e67e22;
+    color: #ffffff;
+    min-width: 200px;
+    text-align: center;
+    -webkit-box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+    -moz-box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+.btn-edit.btn-update:hover {
+    background-color: #f39c12;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+    -moz-box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+}
+
+.btn-edit.btn-update:active {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* --- ALERTE NOTE --- */
+.alert-note {
+    background-color: #fef9e7;
+    border-left: 5px solid #f39c12;
+    padding: 15px 20px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    margin-top: 20px;
+    color: #7d6608;
+    font-size: 14px;
+}
+
+.alert-note i {
+    color: #f39c12;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.alert-note strong {
+    color: #d35400;
+}
+
+/* --- VALIDATION --- */
+.text-danger {
+    display: block;
+    color: #e74c3c;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+/* --- COLONNES --- */
+.col-md-12 {
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.col-md-6 {
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.col-md-8 {
+    float: left;
+    width: 66.6667%;
+    padding: 0 15px;
+}
+
+.col-md-offset-2 {
+    margin-left: 16.6667%;
+}
+
+/* Clearfix */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- ANIMATION APPARITION --- */
+@-webkit-keyframes slideUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes slideUp {
+    from {
+        opacity: 0;
+        -moz-transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.panel-edit {
+    -webkit-animation: slideUp 0.4s ease;
+    -moz-animation: slideUp 0.4s ease;
+    animation: slideUp 0.4s ease;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .col-md-8 {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .col-md-offset-2 {
+        margin-left: 0;
+    }
+
+    .col-md-6 {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .panel-edit {
+        margin-top: 15px;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+    }
+
+    .panel-edit .panel-heading {
+        padding: 15px 20px;
+    }
+
+    .panel-edit .panel-title {
+        font-size: 17px;
+    }
+
+    .panel-edit .panel-body {
+        padding: 20px;
+    }
+
+    .btn-edit {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        min-width: 0;
+    }
+
+    .form-actions {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .panel-edit .panel-title {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    select.form-control,
+    input[type="date"].form-control,
+    input.form-control.edit-pages {
+        height: 42px;
+        font-size: 13px;
+    }
+
+    .form-group label {
+        font-size: 11px;
+    }
+
+    .alert-note {
+        font-size: 12px;
+        padding: 12px 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES TABLEAU DE BORD (DASHBOARD)
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- TITRE DE PAGE --- */
+.page-header {
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.page-header small {
+    color: #7f8c8d;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.page-header i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* --- GRILLE DES CARTES STATISTIQUES --- */
+.dashboard-cards {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.dashboard-cards:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.dashboard-cards .col-card {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+/* --- CARTES DE STATISTIQUES --- */
+.card-stat {
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.card-stat:hover {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    -o-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* En-tête des cartes */
+.card-stat .card-head {
+    padding: 22px 18px;
+    color: #ffffff;
+}
+
+.card-stat .card-head:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card-stat .card-head .card-icon {
+    float: left;
+    width: 30%;
+}
+
+.card-stat .card-head .card-icon i {
+    font-size: 48px;
+    opacity: 0.7;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.card-stat:hover .card-head .card-icon i {
+    opacity: 1;
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+.card-stat .card-head .card-data {
+    float: left;
+    width: 70%;
+    text-align: right;
+}
+
+.card-stat .card-head .card-number {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card-stat .card-head .card-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+/* Couleurs des cartes */
+.card-stat.blue .card-head  { background-color: #3498db; }
+.card-stat.green .card-head { background-color: #27ae60; }
+.card-stat.orange .card-head { background-color: #f39c12; }
+.card-stat.red .card-head   { background-color: #e74c3c; }
+
+/* Pied des cartes */
+.card-stat .card-footer {
+    display: block;
+    padding: 14px 18px;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.card-stat .card-footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card-stat .card-footer:hover {
+    background-color: #e9ecef;
+    text-decoration: none;
+}
+
+.card-stat .card-footer .footer-text {
+    float: left;
+}
+
+.card-stat .card-footer .footer-icon {
+    float: right;
+}
+
+.card-stat.blue .card-footer  { color: #3498db; }
+.card-stat.green .card-footer { color: #27ae60; }
+.card-stat.orange .card-footer { color: #f39c12; }
+.card-stat.red .card-footer   { color: #e74c3c; }
+
+/* --- PANNEAU ACCÈS RAPIDE RAPPORTS --- */
+.panel-rapports {
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-top: 30px;
+    background-color: #ffffff;
+}
+
+.panel-rapports .panel-heading {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 16px 22px;
+    border: none;
+}
+
+.panel-rapports .panel-heading .panel-title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.panel-rapports .panel-heading i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.panel-rapports .panel-body {
+    padding: 25px;
+    background-color: #ffffff;
+}
+
+/* --- BOUTONS DE RAPPORTS RAPIDES --- */
+.btn-rapport {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn-rapport:hover {
+    text-decoration: none;
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
+    transform: translateX(5px);
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-rapport i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.btn-rapport .pull-right {
+    float: right;
+    color: #bdc3c7;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.btn-rapport:hover .pull-right {
+    color: #3498db;
+}
+
+/* Couleurs bordures gauches */
+.btn-rapport.border-blue   { border-left: 4px solid #3498db; }
+.btn-rapport.border-green  { border-left: 4px solid #2ecc71; }
+.btn-rapport.border-orange { border-left: 4px solid #e67e22; }
+.btn-rapport.border-purple { border-left: 4px solid #9b59b6; }
+.btn-rapport.border-red    { border-left: 4px solid #e74c3c; }
+.btn-rapport.border-yellow { border-left: 4px solid #f39c12; }
+.btn-rapport.border-teal   { border-left: 4px solid #1abc9c; }
+.btn-rapport.border-dark   { border-left: 4px solid #34495e; }
+
+/* --- SÉPARATEUR DASHBOARD --- */
+.dashboard-divider {
+    border: none;
+    border-top: 1px solid #ecf0f1;
+    margin: 25px 0;
+}
+
+/* --- BOUTON VOIR TOUS LES RAPPORTS --- */
+.btn-rapports-all {
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    -moz-box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-rapports-all:hover {
+    background-color: #2980b9;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+    -moz-box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+.btn-rapports-all i {
+    margin-right: 10px;
+}
+
+/* --- ZONE BIENVENUE --- */
+.welcome-box {
+    background-color: #ffffff;
+    border-left: 5px solid #3498db;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    padding: 25px;
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.welcome-box h3 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.welcome-box h3 i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.welcome-box p {
+    color: #7f8c8d;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.welcome-box .text-muted {
+    color: #95a5a6;
+    font-size: 12px;
+    margin: 0;
+}
+
+.welcome-box .text-muted i {
+    margin-right: 5px;
+}
+
+/* --- LISTE D'ACTIVITÉS --- */
+.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.list-group-item {
+    display: block;
+    padding: 13px 18px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f1f2f6;
+    color: #34495e;
+    font-size: 13px;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+    text-decoration: none;
+    padding-left: 22px;
+}
+
+.list-group-item.active {
+    background-color: #2c3e50;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: none;
+}
+
+.list-group-item.active:hover {
+    background-color: #2c3e50;
+    padding-left: 18px;
+}
+
+.list-group-item i {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+}
+
+/* Badge dans liste */
+.list-group-item .badge {
+    float: right;
+    background-color: #e74c3c;
+    color: #ffffff;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+}
+
+/* --- GRILLE DU DASHBOARD --- */
+.col-lg-3 {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+.col-md-8 {
+    float: left;
+    width: 66.6667%;
+    padding: 0 15px;
+}
+
+.col-md-4 {
+    float: left;
+    width: 33.3333%;
+    padding: 0 15px;
+}
+
+.col-md-12 {
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- ANIMATIONS --- */
+@-webkit-keyframes bounceIn {
+    0% { opacity: 0; -webkit-transform: scale(0.8); }
+    50% { opacity: 1; -webkit-transform: scale(1.03); }
+    100% { -webkit-transform: scale(1); }
+}
+
+@-moz-keyframes bounceIn {
+    0% { opacity: 0; -moz-transform: scale(0.8); }
+    50% { opacity: 1; -moz-transform: scale(1.03); }
+    100% { -moz-transform: scale(1); }
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.card-stat {
+    -webkit-animation: bounceIn 0.5s ease;
+    -moz-animation: bounceIn 0.5s ease;
+    animation: bounceIn 0.5s ease;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 1024px) {
+    .col-lg-3 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-lg-3 {
+        width: 50%;
+        padding: 0 8px;
+        margin-bottom: 15px;
+    }
+
+    .card-stat .card-head .card-number {
+        font-size: 28px;
+    }
+
+    .card-stat .card-head .card-label {
+        font-size: 11px;
+    }
+
+    .col-md-8,
+    .col-md-4 {
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .btn-rapport {
+        font-size: 13px;
+        padding: 11px 14px;
+    }
+
+    .btn-rapports-all {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .col-lg-3 {
+        width: 50%;
+        padding: 0 5px;
+    }
+
+    .card-stat .card-head {
+        padding: 15px 10px;
+    }
+
+    .card-stat .card-head .card-icon i {
+        font-size: 32px;
+    }
+
+    .card-stat .card-head .card-number {
+        font-size: 22px;
+    }
+
+    .card-stat .card-head .card-label {
+        font-size: 10px;
+    }
+
+    .card-stat .card-footer {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+
+    .page-header {
+        font-size: 20px;
+    }
+
+    .page-header small {
+        display: block;
+        margin-left: 0;
+        margin-top: 5px;
+        font-size: 13px;
+    }
+
+    .panel-rapports .panel-heading .panel-title {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES PAGE DE NOTIFICATION (MESSAGES)
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- CONTENEUR CENTRAL --- */
+.message-wrapper {
+    display: table;
+    width: 100%;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.message-wrapper-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 30px;
+}
+
+/* --- CARTE DE MESSAGE --- */
+.message-container {
+    display: inline-block;
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    padding: 45px 35px;
+    text-align: center;
+    -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid #3498db;
+    position: relative;
+}
+
+/* --- CERCLE D'ICÔNE --- */
+.message-icon-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    display: inline-block;
+    line-height: 90px;
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Couleurs par type */
+.message-icon-circle.success {
+    background-color: #27ae60;
+    -webkit-box-shadow: 0 0 30px rgba(39, 174, 96, 0.5);
+    -moz-box-shadow: 0 0 30px rgba(39, 174, 96, 0.5);
+    box-shadow: 0 0 30px rgba(39, 174, 96, 0.5);
+}
+
+.message-icon-circle.error {
+    background-color: #e74c3c;
+    -webkit-box-shadow: 0 0 30px rgba(231, 76, 60, 0.5);
+    -moz-box-shadow: 0 0 30px rgba(231, 76, 60, 0.5);
+    box-shadow: 0 0 30px rgba(231, 76, 60, 0.5);
+}
+
+.message-icon-circle.warning {
+    background-color: #f39c12;
+    -webkit-box-shadow: 0 0 30px rgba(243, 156, 18, 0.5);
+    -moz-box-shadow: 0 0 30px rgba(243, 156, 18, 0.5);
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.5);
+}
+
+/* --- TITRE DU MESSAGE --- */
+.message-title {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.5px;
+}
+
+/* --- SOUS-TITRE --- */
+.message-subtitle {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin: 0 0 25px 0;
+    line-height: 1.6;
+}
+
+/* --- BARRE DE PROGRESSION --- */
+.progress-loader {
+    width: 100%;
+    height: 8px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0 15px 0;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #3498db;
+    background-image: -webkit-linear-gradient(45deg, 
+        rgba(255,255,255,0.15) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255,255,255,0.15) 50%, 
+        rgba(255,255,255,0.15) 75%, 
+        transparent 75%, 
+        transparent);
+    background-image: -moz-linear-gradient(45deg, 
+        rgba(255,255,255,0.15) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255,255,255,0.15) 50%, 
+        rgba(255,255,255,0.15) 75%, 
+        transparent 75%, 
+        transparent);
+    background-image: linear-gradient(45deg, 
+        rgba(255,255,255,0.15) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255,255,255,0.15) 50%, 
+        rgba(255,255,255,0.15) 75%, 
+        transparent 75%, 
+        transparent);
+    background-size: 30px 30px;
+    -webkit-animation: progressStripe 1s linear infinite, progressFill 3s ease forwards;
+    -moz-animation: progressStripe 1s linear infinite, progressFill 3s ease forwards;
+    animation: progressStripe 1s linear infinite, progressFill 3s ease forwards;
+}
+
+/* --- TEXTE DE REDIRECTION --- */
+.redirect-text {
+    color: #95a5a6;
+    font-size: 13px;
+    font-style: italic;
+    margin: 0 0 20px 0;
+}
+
+/* --- BOUTON D'ACTION --- */
+.message-actions {
+    margin-top: 20px;
+}
+
+.message-actions .btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.message-actions .btn-primary {
+    background-color: #3498db;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    -moz-box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.message-actions .btn-primary:hover {
+    background-color: #2980b9;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    -moz-box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.message-actions .btn-primary i {
+    margin-right: 8px;
+}
+
+/* --- ANIMATIONS --- */
+
+/* Apparition bounce */
+@-webkit-keyframes bounceIn {
+    0% { opacity: 0; -webkit-transform: scale(0.3); }
+    50% { opacity: 1; -webkit-transform: scale(1.05); }
+    70% { -webkit-transform: scale(0.95); }
+    100% { -webkit-transform: scale(1); }
+}
+
+@-moz-keyframes bounceIn {
+    0% { opacity: 0; -moz-transform: scale(0.3); }
+    50% { opacity: 1; -moz-transform: scale(1.05); }
+    70% { -moz-transform: scale(0.95); }
+    100% { -moz-transform: scale(1); }
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.05); }
+    70% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.message-container.animated {
+    -webkit-animation: bounceIn 0.7s ease;
+    -moz-animation: bounceIn 0.7s ease;
+    animation: bounceIn 0.7s ease;
+}
+
+/* Barre de progression */
+@-webkit-keyframes progressFill {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@-moz-keyframes progressFill {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes progressFill {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@-webkit-keyframes progressStripe {
+    from { background-position: 30px 0; }
+    to { background-position: 0 0; }
+}
+
+@-moz-keyframes progressStripe {
+    from { background-position: 30px 0; }
+    to { background-position: 0 0; }
+}
+
+@keyframes progressStripe {
+    from { background-position: 30px 0; }
+    to { background-position: 0 0; }
+}
+
+/* Pulse sur l'icône */
+@-webkit-keyframes pulse {
+    0% { -webkit-box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.6); }
+    70% { -webkit-box-shadow: 0 0 0 20px rgba(39, 174, 96, 0); }
+    100% { -webkit-box-shadow: 0 0 0 0 rgba(39, 174, 96, 0); }
+}
+
+@-moz-keyframes pulse {
+    0% { -moz-box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.6); }
+    70% { -moz-box-shadow: 0 0 0 20px rgba(39, 174, 96, 0); }
+    100% { -moz-box-shadow: 0 0 0 0 rgba(39, 174, 96, 0); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.6); }
+    70% { box-shadow: 0 0 0 20px rgba(39, 174, 96, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0); }
+}
+
+.message-icon-circle.success {
+    -webkit-animation: pulse 2s infinite;
+    -moz-animation: pulse 2s infinite;
+    animation: pulse 2s infinite;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .message-container {
+        max-width: 400px;
+        padding: 30px 25px;
+    }
+
+    .message-icon-circle {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 32px;
+    }
+
+    .message-title {
+        font-size: 20px;
+    }
+
+    .message-subtitle {
+        font-size: 13px;
+    }
+
+    .message-actions .btn {
+        padding: 12px 24px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .message-wrapper-inner {
+        padding: 15px;
+    }
+
+    .message-container {
+        padding: 25px 18px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+    }
+
+    .message-icon-circle {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+
+    .message-title {
+        font-size: 18px;
+    }
+
+    .redirect-text {
+        font-size: 11px;
+    }
+
+    .message-actions .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES PAGE INDEX LIVRES
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- CONTENEUR PRINCIPAL --- */
+.desktop-wrapper {
+    background-color: #ffffff;
+    border: 1px solid #d5dbdb;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 25px auto;
+    max-width: 1100px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- BARRE D'EN-TÊTE INDEX --- */
+.form-header-strip-index {
+    background-color: #2c3e50;
+    background-image: -webkit-linear-gradient(135deg, #2c3e50, #2980b9);
+    background-image: -moz-linear-gradient(135deg, #2c3e50, #2980b9);
+    background-image: -o-linear-gradient(135deg, #2c3e50, #2980b9);
+    background-image: linear-gradient(135deg, #2c3e50, #2980b9);
+    color: #ffffff;
+    padding: 18px 30px;
+    border-bottom: 4px solid #1f618d;
+}
+
+.form-header-strip-index:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header-title-area {
+    float: left;
+}
+
+.header-title-area i {
+    font-size: 26px;
+    color: #3498db;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+.header-title-area label {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #ffffff;
+    vertical-align: middle;
+    cursor: default;
+}
+
+/* Zone des actions (bouton ajouter) */
+.header-actions-area {
+    float: right;
+}
+
+/* --- BOUTON AJOUTER UN LIVRE --- */
+.btn-index-add {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    -moz-box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-index-add:hover {
+    background-color: #2ecc71;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+    -moz-box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+.btn-index-add i {
+    margin-right: 8px;
+}
+
+/* --- CORPS DU CONTENU --- */
+.form-content-body {
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* --- BARRE DE STATISTIQUES --- */
+.quick-stats-bar {
+    background-color: #f8f9fa;
+    padding: 12px 30px;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+.quick-stats-bar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.quick-stats-bar .stat-item {
+    float: left;
+    margin-right: 25px;
+}
+
+.quick-stats-bar .stat-item strong {
+    color: #2c3e50;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.quick-stats-bar .stat-mode-indicator {
+    float: right;
+    font-weight: 700;
+    color: #e67e22;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+/* --- TABLEAU --- */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.uago-custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+/* En-tête du tableau */
+.uago-custom-table thead th {
+    background-color: #ffffff;
+    color: #34495e;
+    padding: 16px 20px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #3498db;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* Colonnes spécifiques */
+.uago-custom-table .col-id {
+    width: 100px;
+    text-align: center;
+}
+
+.uago-custom-table .col-titre {
+    /* largeur automatique */
+}
+
+.uago-custom-table .col-pages {
+    width: 100px;
+    text-align: center;
+}
+
+.uago-custom-table .col-actions {
+    width: 200px;
+    text-align: center;
+}
+
+/* Corps du tableau */
+.uago-custom-table tbody td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f1f2f6;
+    color: #34495e;
+    vertical-align: middle;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+
+.uago-custom-table tbody tr:hover {
+    background-color: #f4f8fb;
+}
+
+.uago-custom-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Cellule ID */
+.cell-id {
+    text-align: center;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-weight: 700;
+    color: #2980b9;
+    font-size: 14px;
+}
+
+/* Cellule Titre */
+.cell-titre {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Cellule Pages */
+.cell-pages {
+    text-align: center;
+}
+
+/* Badge pages */
+.page-badge {
+    display: inline-block;
+    background-color: #ebf5fb;
+    color: #2e86c1;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid #d6eaf8;
+    white-space: nowrap;
+}
+
+/* Cellule Actions */
+.cell-actions {
+    text-align: center;
+}
+
+/* --- BOUTONS D'ACTION --- */
+.action-buttons-group {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.btn-mini-edit,
+.btn-mini-delete {
+    display: inline-block;
+    padding: 8px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    margin: 0 3px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.btn-mini-edit i,
+.btn-mini-delete i {
+    margin-right: 5px;
+}
+
+/* Bouton Modifier */
+.btn-mini-edit {
+    background-color: #f39c12;
+    color: #ffffff;
+}
+
+.btn-mini-edit:hover {
+    background-color: #e67e22;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    transform: translateY(-1px);
+    -webkit-box-shadow: 0 3px 10px rgba(243, 156, 18, 0.3);
+    -moz-box-shadow: 0 3px 10px rgba(243, 156, 18, 0.3);
+    box-shadow: 0 3px 10px rgba(243, 156, 18, 0.3);
+}
+
+/* Bouton Supprimer */
+.btn-mini-delete {
+    background-color: #95a5a6;
+    color: #ffffff;
+}
+
+.btn-mini-delete:hover {
+    background-color: #e74c3c;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    transform: translateY(-1px);
+    -webkit-box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+    -moz-box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+}
+
+/* --- ÉTAT VIDE --- */
+.empty-state-container {
+    text-align: center;
+    padding: 60px 30px;
+    color: #95a5a6;
+}
+
+.empty-state-container i {
+    display: block;
+    font-size: 64px;
+    color: #bdc3c7;
+    margin-bottom: 20px;
+}
+
+.empty-state-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.empty-state-container .btn-action {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.empty-state-container .btn-action:hover {
+    background-color: #2980b9;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* --- PIED DE PAGE INDEX --- */
+.index-footer-strip {
+    background-color: #f8f9fa;
+    padding: 14px 30px;
+    border-top: 1px solid #e9ecef;
+    font-size: 12px;
+    color: #95a5a6;
+    font-weight: 600;
+}
+
+.index-footer-strip:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.index-footer-strip .system-time {
+    float: left;
+}
+
+.index-footer-strip .pagination-info {
+    float: right;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .desktop-wrapper {
+        margin: 10px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+    }
+
+    .form-header-strip-index {
+        padding: 15px 20px;
+    }
+
+    .header-title-area {
+        float: none;
+        display: block;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .header-title-area label {
+        font-size: 14px;
+    }
+
+    .header-actions-area {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .btn-index-add {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .quick-stats-bar {
+        padding: 10px 20px;
+    }
+
+    .quick-stats-bar .stat-item,
+    .quick-stats-bar .stat-mode-indicator {
+        float: none;
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .uago-custom-table thead th,
+    .uago-custom-table tbody td {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .uago-custom-table .col-pages,
+    .uago-custom-table .cell-pages {
+        display: none;
+    }
+
+    .btn-mini-edit,
+    .btn-mini-delete {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .index-footer-strip .system-time,
+    .index-footer-strip .pagination-info {
+        float: none;
+        display: block;
+        text-align: center;
+        margin-bottom: 3px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-title-area i {
+        font-size: 20px;
+    }
+
+    .header-title-area label {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    .uago-custom-table .col-actions {
+        width: 130px;
+    }
+
+    .page-badge {
+        font-size: 10px;
+        padding: 4px 10px;
+    }
+
+    .empty-state-container i {
+        font-size: 48px;
+    }
+
+    .empty-state-container p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES FORMULAIRE CRÉATION LIVRE
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- BARRE D'EN-TÊTE CRÉATION LIVRE --- */
+.form-header-strip-create {
+    background-color: #2c3e50;
+    background-image: -webkit-linear-gradient(left, #2c3e50, #34495e);
+    background-image: -moz-linear-gradient(left, #2c3e50, #34495e);
+    background-image: -o-linear-gradient(left, #2c3e50, #34495e);
+    background-image: linear-gradient(to right, #2c3e50, #34495e);
+    color: #ffffff;
+    padding: 18px 25px;
+    border-bottom: 4px solid #3498db;
+}
+
+.form-header-strip-create:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.form-header-strip-create label {
+    float: left;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 28px;
+}
+
+.form-header-strip-create .status-badge {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ecf0f1;
+    padding: 5px 14px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- FIELDSET --- */
+.group-box {
+    border: 1px solid #e0e6e8;
+    border-left: 5px solid #3498db;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    padding: 30px 25px 20px 25px;
+    margin-bottom: 25px;
+    background-color: #fafbfd;
+    position: relative;
+}
+
+.group-box legend {
+    width: auto;
+    padding: 0 15px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #2980b9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #ffffff;
+    border: 1px solid #e0e6e8;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+/* --- ÉLÉMENTS DE FORMULAIRE --- */
+.form-item {
+    margin-bottom: 22px;
+}
+
+.form-item label {
+    display: block;
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- CHAMPS DE SAISIE --- */
+.form-control {
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #2c3e50;
+    background-color: #fefefe;
+    border: 2px solid #dcdde1;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    background-color: #ffffff;
+    outline: none;
+    -webkit-box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    -moz-box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+/* Placeholder stylisé */
+.form-control::-webkit-input-placeholder {
+    color: #bdc3c7;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.form-control::-moz-placeholder {
+    color: #bdc3c7;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #bdc3c7;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/* Champ ID Livre - style spécial */
+.form-control.input-id-livre {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Champ nombre */
+input[type="number"].form-control {
+    -moz-appearance: textfield;
+}
+
+input[type="number"].form-control::-webkit-inner-spin-button,
+input[type="number"].form-control::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* --- VALIDATION --- */
+.text-danger {
+    display: block;
+    color: #e74c3c;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+/* --- BARRE D'ACTIONS --- */
+.action-tool-strip {
+    background-color: #f8f9fa;
+    padding: 25px 35px;
+    border-top: 1px solid #e0e6e8;
+    margin-top: 30px;
+}
+
+.action-tool-strip:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.action-tool-strip .pull-right {
+    float: right;
+}
+
+/* --- BOUTONS D'ACTION --- */
+.btn-action {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 12px 25px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-action i {
+    margin-right: 8px;
+}
+
+.btn-action:hover {
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+.btn-action:active {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* Bouton Enregistrer */
+.btn-action.primary {
+    background-color: #27ae60;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 0 #1e8449;
+    -moz-box-shadow: 0 4px 0 #1e8449;
+    box-shadow: 0 4px 0 #1e8449;
+}
+
+.btn-action.primary:hover {
+    background-color: #2ecc71;
+    -webkit-box-shadow: 0 6px 0 #1e8449;
+    -moz-box-shadow: 0 6px 0 #1e8449;
+    box-shadow: 0 6px 0 #1e8449;
+    color: #ffffff;
+}
+
+/* Bouton Réinitialiser */
+.btn-action.default {
+    background-color: #95a5a6;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 0 #7f8c8d;
+    -moz-box-shadow: 0 4px 0 #7f8c8d;
+    box-shadow: 0 4px 0 #7f8c8d;
+}
+
+.btn-action.default:hover {
+    background-color: #a0b0b0;
+    -webkit-box-shadow: 0 6px 0 #7f8c8d;
+    -moz-box-shadow: 0 6px 0 #7f8c8d;
+    box-shadow: 0 6px 0 #7f8c8d;
+    color: #ffffff;
+}
+
+/* Bouton Retour liste */
+.btn-action.dark {
+    background-color: #2c3e50;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 0 #1a252f;
+    -moz-box-shadow: 0 4px 0 #1a252f;
+    box-shadow: 0 4px 0 #1a252f;
+}
+
+.btn-action.dark:hover {
+    background-color: #34495e;
+    -webkit-box-shadow: 0 6px 0 #1a252f;
+    -moz-box-shadow: 0 6px 0 #1a252f;
+    box-shadow: 0 6px 0 #1a252f;
+    color: #ffffff;
+}
+
+/* --- GRILLE --- */
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-md-4 {
+    float: left;
+    width: 33.3333%;
+    padding: 0 15px;
+}
+
+.col-md-6 {
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+}
+
+.col-md-12 {
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .desktop-wrapper {
+        margin: 10px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+    }
+
+    .form-header-strip-create {
+        padding: 15px;
+    }
+
+    .form-header-strip-create label {
+        float: none;
+        display: block;
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .form-header-strip-create .status-badge {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .col-md-4,
+    .col-md-6,
+    .col-md-12 {
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .form-content-body {
+        padding: 20px;
+    }
+
+    .group-box {
+        padding: 20px 15px 15px 15px;
+    }
+
+    .action-tool-strip {
+        padding: 15px;
+    }
+
+    .btn-action {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .action-tool-strip .pull-right {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-header-strip-create label {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    .form-item label {
+        font-size: 11px;
+    }
+
+    .form-control {
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .btn-action {
+        padding: 10px 18px;
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES FORMULAIRE ÉDITION LIVRE
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- BARRE D'EN-TÊTE ÉDITION LIVRE --- */
+.form-header-strip-edit-livre {
+    background-color: #d35400;
+    background-image: -webkit-linear-gradient(left, #d35400, #e67e22);
+    background-image: -moz-linear-gradient(left, #d35400, #e67e22);
+    background-image: -o-linear-gradient(left, #d35400, #e67e22);
+    background-image: linear-gradient(to right, #d35400, #e67e22);
+    color: #ffffff;
+    padding: 18px 25px;
+    border-bottom: 4px solid #f39c12;
+}
+
+.form-header-strip-edit-livre:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.form-header-strip-edit-livre label {
+    float: left;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 28px;
+    color: #ffffff;
+}
+
+.form-header-strip-edit-livre .status-badge-edit {
+    float: right;
+    background-color: #f39c12;
+    color: #ffffff;
+    padding: 5px 14px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+/* Badge modifié */
+.status-badge-edit.modified {
+    background-color: #e74c3c;
+}
+
+/* --- FIELDSET ÉDITION --- */
+.group-box-edit {
+    border: 1px solid #f0d9c0;
+    border-left: 5px solid #e67e22;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    padding: 30px 25px 20px 25px;
+    margin-bottom: 25px;
+    background-color: #fefbf7;
+    position: relative;
+}
+
+.group-box-edit legend {
+    width: auto;
+    padding: 0 15px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #d35400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #ffffff;
+    border: 1px solid #f0d9c0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+/* --- CHAMP VERROUILLÉ (ID LECTURE SEULE) --- */
+.form-control-locked-edit {
+    background-color: #fdf5ed !important;
+    color: #7f5539 !important;
+    font-weight: 700;
+    cursor: not-allowed;
+    border-left: 4px solid #f39c12 !important;
+    font-family: 'Consolas', 'Courier New', monospace;
+    letter-spacing: 0.5px;
+}
+
+/* --- CHAMP NOMBRE --- */
+input[type="number"].form-control {
+    -moz-appearance: textfield;
+}
+
+input[type="number"].form-control::-webkit-inner-spin-button,
+input[type="number"].form-control::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* --- BOUTON WARNING (APPLIQUER CHANGEMENTS) --- */
+.btn-action.warning {
+    background-color: #e67e22;
+    color: #ffffff;
+    -webkit-box-shadow: 0 4px 0 #a04000;
+    -moz-box-shadow: 0 4px 0 #a04000;
+    box-shadow: 0 4px 0 #a04000;
+}
+
+.btn-action.warning:hover {
+    background-color: #f39c12;
+    -webkit-box-shadow: 0 6px 0 #a04000;
+    -moz-box-shadow: 0 6px 0 #a04000;
+    box-shadow: 0 6px 0 #a04000;
+    color: #ffffff;
+}
+
+.btn-action.warning:active {
+    -webkit-box-shadow: 0 2px 0 #a04000;
+    -moz-box-shadow: 0 2px 0 #a04000;
+    box-shadow: 0 2px 0 #a04000;
+}
+
+/* --- ANIMATION SPINNER --- */
+@-webkit-keyframes fa-spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(359deg); }
+}
+
+@-moz-keyframes fa-spin {
+    0% { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(359deg); }
+}
+
+@keyframes fa-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(359deg); }
+}
+
+.fa-spin {
+    -webkit-animation: fa-spin 1s infinite linear;
+    -moz-animation: fa-spin 1s infinite linear;
+    animation: fa-spin 1s infinite linear;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .form-header-strip-edit-livre {
+        padding: 15px;
+    }
+
+    .form-header-strip-edit-livre label {
+        float: none;
+        display: block;
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .form-header-strip-edit-livre .status-badge-edit {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .group-box-edit {
+        padding: 20px 15px 15px 15px;
+    }
+
+    .btn-action.warning,
+    .btn-action.default,
+    .btn-action.dark {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-header-strip-edit-livre label {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    .form-control-locked-edit {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES RAPPORTS : AUTEURS SANS PUBLICATION
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- TITRE DU RAPPORT --- */
+.rapport-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #e74c3c;
+}
+
+.rapport-title i {
+    color: #e74c3c;
+    margin-right: 12px;
+    font-size: 26px;
+}
+
+/* --- STATISTIQUE RAPIDE --- */
+.rapport-stats {
+    background-color: #ffffff;
+    border-left: 5px solid #e74c3c;
+    padding: 18px 25px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.rapport-stats .stats-label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #95a5a6;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.rapport-stats .stats-value {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: #e74c3c;
+}
+
+/* --- TABLEAU --- */
+.rapport-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rapport-table thead th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 15px 18px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    border: none;
+}
+
+.rapport-table thead th:first-child {
+    text-align: center;
+    width: 80px;
+}
+
+.rapport-table tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #34495e;
+    vertical-align: middle;
+}
+
+.rapport-table tbody tr:hover {
+    background-color: #fef5f5;
+}
+
+.rapport-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Colonne ID */
+.rapport-table .col-id {
+    text-align: center;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-weight: 700;
+    color: #e74c3c;
+}
+
+/* Colonne Nom */
+.rapport-table .col-nom {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Colonne PostNom */
+.rapport-table .col-postnom {
+    text-transform: uppercase;
+    color: #7f8c8d;
+}
+
+/* Colonne Prénom */
+.rapport-table .col-prenom {
+    color: #2980b9;
+    font-weight: 500;
+}
+
+/* --- ÉTAT VIDE (SUCCÈS) --- */
+.rapport-empty-success {
+    background-color: #d5f5e3;
+    color: #1e8449;
+    padding: 25px 30px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-left: 5px solid #27ae60;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.rapport-empty-success i {
+    display: block;
+    font-size: 48px;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .rapport-title {
+        font-size: 20px;
+    }
+
+    .rapport-stats .stats-value {
+        font-size: 22px;
+    }
+
+    .rapport-table thead th,
+    .rapport-table tbody td {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .rapport-table thead th:nth-child(4),
+    .rapport-table tbody td:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rapport-title {
+        font-size: 17px;
+    }
+
+    .rapport-table thead th:nth-child(3),
+    .rapport-table tbody td:nth-child(3) {
+        display: none;
+    }
+
+    .rapport-empty-success {
+        font-size: 14px;
+        padding: 20px;
+    }
+
+    .rapport-empty-success i {
+        font-size: 36px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES PAGE CENTRE DE RAPPORTS
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- CONTENEUR PRINCIPAL --- */
+.rapport-center-container {
+    margin-top: 80px;
+    padding-bottom: 40px;
+}
+
+/* --- EN-TÊTE --- */
+.rapport-center-header {
+    border-bottom: 3px solid #2c3e50;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+}
+
+.rapport-center-header h1 {
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0 0 8px 0;
+}
+
+.rapport-center-header h1 i {
+    color: #3498db;
+    margin-right: 12px;
+}
+
+.rapport-center-header .header-subtitle {
+    color: #7f8c8d;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* --- GRILLE DES CARTES --- */
+.rapport-grid {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.rapport-grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.rapport-grid .rapport-col {
+    float: left;
+    width: 33.3333%;
+    padding: 0 12px;
+    margin-bottom: 25px;
+}
+
+/* --- CARTE DE RAPPORT --- */
+.rapport-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.rapport-card:hover {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    -o-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* --- CORPS DE LA CARTE --- */
+.rapport-card-body {
+    padding: 32px 22px;
+    text-align: center;
+}
+
+/* Icône */
+.rapport-card-icon {
+    font-size: 48px;
+    margin-bottom: 18px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.rapport-card:hover .rapport-card-icon {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* Titre */
+.rapport-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+}
+
+/* Description */
+.rapport-card-desc {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin: 0 0 20px 0;
+    line-height: 1.6;
+}
+
+/* --- BOUTON CONSULTER --- */
+.rapport-card-btn {
+    display: block;
+    width: 100%;
+    padding: 11px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.rapport-card-btn i {
+    margin-right: 8px;
+}
+
+.rapport-card-btn:hover {
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+/* --- COULEURS DES CARTES --- */
+
+/* Carte Bleue */
+.rapport-card.blue { border-top: 4px solid #3498db; }
+.rapport-card.blue .rapport-card-icon { color: #3498db; }
+.rapport-card.blue .rapport-card-btn { background-color: #3498db; color: #ffffff; }
+.rapport-card.blue .rapport-card-btn:hover { background-color: #2980b9; -webkit-box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4); -moz-box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4); box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4); }
+
+/* Carte Verte */
+.rapport-card.green { border-top: 4px solid #2ecc71; }
+.rapport-card.green .rapport-card-icon { color: #2ecc71; }
+.rapport-card.green .rapport-card-btn { background-color: #27ae60; color: #ffffff; }
+.rapport-card.green .rapport-card-btn:hover { background-color: #219a52; -webkit-box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4); -moz-box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4); box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4); }
+
+/* Carte Orange */
+.rapport-card.orange { border-top: 4px solid #e67e22; }
+.rapport-card.orange .rapport-card-icon { color: #e67e22; }
+.rapport-card.orange .rapport-card-btn { background-color: #e67e22; color: #ffffff; }
+.rapport-card.orange .rapport-card-btn:hover { background-color: #d35400; -webkit-box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4); -moz-box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4); box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4); }
+
+/* Carte Violette */
+.rapport-card.purple { border-top: 4px solid #9b59b6; }
+.rapport-card.purple .rapport-card-icon { color: #9b59b6; }
+.rapport-card.purple .rapport-card-btn { background-color: #9b59b6; color: #ffffff; }
+.rapport-card.purple .rapport-card-btn:hover { background-color: #8e44ad; -webkit-box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4); -moz-box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4); box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4); }
+
+/* Carte Rouge */
+.rapport-card.red { border-top: 4px solid #e74c3c; }
+.rapport-card.red .rapport-card-icon { color: #e74c3c; }
+.rapport-card.red .rapport-card-btn { background-color: #e74c3c; color: #ffffff; }
+.rapport-card.red .rapport-card-btn:hover { background-color: #c0392b; -webkit-box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); -moz-box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); }
+
+/* Carte Jaune/Ambre */
+.rapport-card.yellow { border-top: 4px solid #f39c12; }
+.rapport-card.yellow .rapport-card-icon { color: #f39c12; }
+.rapport-card.yellow .rapport-card-btn { background-color: #f39c12; color: #ffffff; }
+.rapport-card.yellow .rapport-card-btn:hover { background-color: #e67e22; -webkit-box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4); -moz-box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4); box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4); }
+
+/* Carte Turquoise */
+.rapport-card.teal { border-top: 4px solid #1abc9c; }
+.rapport-card.teal .rapport-card-icon { color: #1abc9c; }
+.rapport-card.teal .rapport-card-btn { background-color: #1abc9c; color: #ffffff; }
+.rapport-card.teal .rapport-card-btn:hover { background-color: #16a085; -webkit-box-shadow: 0 4px 15px rgba(26, 188, 156, 0.4); -moz-box-shadow: 0 4px 15px rgba(26, 188, 156, 0.4); box-shadow: 0 4px 15px rgba(26, 188, 156, 0.4); }
+
+/* Carte Sombre */
+.rapport-card.dark { border-top: 4px solid #34495e; }
+.rapport-card.dark .rapport-card-icon { color: #34495e; }
+.rapport-card.dark .rapport-card-btn { background-color: #34495e; color: #ffffff; }
+.rapport-card.dark .rapport-card-btn:hover { background-color: #2c3e50; -webkit-box-shadow: 0 4px 15px rgba(52, 73, 94, 0.4); -moz-box-shadow: 0 4px 15px rgba(52, 73, 94, 0.4); box-shadow: 0 4px 15px rgba(52, 73, 94, 0.4); }
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 1024px) {
+    .rapport-grid .rapport-col {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .rapport-center-container {
+        margin-top: 70px;
+    }
+
+    .rapport-grid .rapport-col {
+        width: 50%;
+    }
+
+    .rapport-center-header h1 {
+        font-size: 24px;
+    }
+
+    .rapport-center-header .header-subtitle {
+        font-size: 14px;
+    }
+
+    .rapport-card-body {
+        padding: 25px 18px;
+    }
+
+    .rapport-card-icon {
+        font-size: 38px;
+    }
+
+    .rapport-card-title {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .rapport-grid .rapport-col {
+        width: 100%;
+        float: none;
+    }
+
+    .rapport-center-header h1 {
+        font-size: 20px;
+    }
+
+    .rapport-center-header .header-subtitle {
+        font-size: 13px;
+    }
+
+    .rapport-card-icon {
+        font-size: 42px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES RAPPORT : INVENTAIRE DES LIVRES
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- CONTENEUR PRINCIPAL --- */
+.report-container {
+    padding: 25px;
+    background-color: #f5f6fa;
+    min-height: 80vh;
+}
+
+/* --- GRILLE DE STATISTIQUES --- */
+.stats-grid {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 30px;
+}
+
+.stats-grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.stat-card {
+    float: left;
+    width: 33.3333%;
+    padding: 0 10px;
+}
+
+.stat-card-inner {
+    background-color: #ffffff;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    padding: 25px;
+    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-left: 5px solid #3498db;
+}
+
+.stat-card-inner:hover {
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card-inner:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Couleurs des cartes */
+.stat-card.blue .stat-card-inner   { border-left-color: #3498db; }
+.stat-card.orange .stat-card-inner { border-left-color: #e67e22; }
+.stat-card.green .stat-card-inner  { border-left-color: #27ae60; }
+
+/* Icône */
+.stat-icon {
+    float: left;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    text-align: center;
+    line-height: 55px;
+    font-size: 26px;
+    margin-right: 18px;
+}
+
+.stat-card.blue .stat-icon {
+    background-color: #ebf5fb;
+    color: #3498db;
+}
+
+.stat-card.orange .stat-icon {
+    background-color: #fef5e7;
+    color: #e67e22;
+}
+
+.stat-card.green .stat-icon {
+    background-color: #eafaf1;
+    color: #27ae60;
+}
+
+/* Détails */
+.stat-details {
+    overflow: hidden;
+}
+
+.stat-label {
+    display: block;
+    font-size: 12px;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 30px;
+    font-weight: 800;
+    color: #2c3e50;
+    margin: 0;
+    line-height: 1;
+}
+
+/* --- PANNEAU DU TABLEAU --- */
+.report-panel {
+    background-color: #ffffff;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+}
+
+.report-panel .panel-header {
+    background-color: #f8f9fa;
+    padding: 18px 25px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.report-panel .panel-header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.report-panel .panel-header h3 {
+    float: left;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 36px;
+}
+
+.report-panel .panel-header h3 i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* --- BOUTON IMPRIMER --- */
+.btn-print {
+    float: right;
+    padding: 9px 22px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-print:hover {
+    background-color: #2980b9;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    -moz-box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-print i {
+    margin-right: 7px;
+}
+
+/* --- TABLEAU --- */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.uago-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.uago-table thead th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 15px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    border: none;
+}
+
+.uago-table thead th.text-right {
+    text-align: right;
+}
+
+.uago-table tbody td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #34495e;
+    vertical-align: middle;
+}
+
+.uago-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.uago-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Cellule Code */
+.code-cell {
+    font-weight: 700;
+    color: #3498db;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 13px;
+}
+
+/* Cellule Titre */
+.title-cell {
+    font-weight: 600;
+    color: #2c3e50;
+    font-style: italic;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .stat-card {
+        float: none;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 0;
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+
+    .report-panel .panel-header h3 {
+        float: none;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .btn-print {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .uago-table thead th,
+    .uago-table tbody td {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .report-container {
+        padding: 15px;
+    }
+
+    .stat-card-inner {
+        padding: 18px;
+    }
+
+    .stat-icon {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 22px;
+        margin-right: 12px;
+    }
+
+    .stat-value {
+        font-size: 22px;
+    }
+
+    .uago-table thead th {
+        font-size: 10px;
+        padding: 10px 8px;
+    }
+
+    .uago-table tbody td {
+        font-size: 11px;
+        padding: 10px 8px;
+    }
+}
+
+/* --- IMPRESSION --- */
+@media print {
+    body {
+        background-color: #ffffff;
+    }
+
+    .report-container {
+        padding: 0;
+        background-color: #ffffff;
+    }
+
+    .btn-print {
+        display: none !important;
+    }
+
+    .stat-card-inner {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+
+    .report-panel {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES RAPPORT : LISTE DES AUTEURS
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- TITRE DU RAPPORT --- */
+.rapport-title-auteurs {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+}
+
+.rapport-title-auteurs i {
+    color: #3498db;
+    margin-right: 12px;
+    font-size: 26px;
+}
+
+/* --- BOUTON GÉRER --- */
+.btn-gerer {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-gerer:hover {
+    background-color: #2980b9;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    -moz-box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-gerer i {
+    margin-right: 8px;
+}
+
+/* --- STATISTIQUE TOTAL --- */
+.rapport-total {
+    background-color: #ffffff;
+    border-left: 5px solid #3498db;
+    padding: 14px 20px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.rapport-total strong {
+    font-size: 22px;
+    color: #3498db;
+    font-weight: 800;
+}
+
+/* --- TABLEAU --- */
+.rapport-table-auteurs {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rapport-table-auteurs thead th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 15px 18px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    border: none;
+}
+
+.rapport-table-auteurs thead th:first-child {
+    text-align: center;
+    width: 70px;
+}
+
+.rapport-table-auteurs tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #34495e;
+    vertical-align: middle;
+}
+
+.rapport-table-auteurs tbody tr:hover {
+    background-color: #f4f8fb;
+}
+
+.rapport-table-auteurs tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Colonnes */
+.rapport-table-auteurs .col-id {
+    text-align: center;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-weight: 700;
+    color: #2980b9;
+}
+
+.rapport-table-auteurs .col-nom {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.rapport-table-auteurs .col-postnom {
+    text-transform: uppercase;
+    color: #7f8c8d;
+}
+
+.rapport-table-auteurs .col-prenom {
+    color: #2980b9;
+    font-weight: 500;
+}
+
+.rapport-table-auteurs .col-date {
+    color: #7f8c8d;
+}
+
+.rapport-table-auteurs .col-date i {
+    color: #bdc3c7;
+    margin-right: 5px;
+}
+
+/* --- ÉTAT VIDE --- */
+.rapport-empty {
+    text-align: center;
+    padding: 50px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    color: #95a5a6;
+}
+
+.rapport-empty i {
+    display: block;
+    font-size: 52px;
+    color: #bdc3c7;
+    margin-bottom: 15px;
+}
+
+.rapport-empty p {
+    font-size: 15px;
+    margin: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .rapport-title-auteurs {
+        font-size: 20px;
+    }
+
+    .btn-gerer {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .rapport-total strong {
+        font-size: 18px;
+    }
+
+    .rapport-table-auteurs thead th,
+    .rapport-table-auteurs tbody td {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    /* Masquer colonnes Prénom et Date sur tablette */
+    .rapport-table-auteurs thead th:nth-child(4),
+    .rapport-table-auteurs tbody td:nth-child(4),
+    .rapport-table-auteurs thead th:nth-child(5),
+    .rapport-table-auteurs tbody td:nth-child(5) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rapport-title-auteurs {
+        font-size: 17px;
+    }
+
+    /* Masquer aussi Post-Nom sur mobile */
+    .rapport-table-auteurs thead th:nth-child(3),
+    .rapport-table-auteurs tbody td:nth-child(3) {
+        display: none;
+    }
+
+    .rapport-empty i {
+        font-size: 40px;
+    }
+
+    .rapport-empty p {
+        font-size: 13px;
+    }
+}
+
+/* --- IMPRESSION --- */
+@media print {
+    .btn-gerer {
+        display: none !important;
+    }
+
+    .rapport-table-auteurs {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+
+    .rapport-total {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES RAPPORT : CATALOGUE DES LIVRES
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- TITRE DU RAPPORT --- */
+.rapport-title-livres {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #2ecc71;
+}
+
+.rapport-title-livres i {
+    color: #2ecc71;
+    margin-right: 12px;
+    font-size: 26px;
+}
+
+/* --- BOUTON GÉRER --- */
+.btn-gerer-livres {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-gerer-livres:hover {
+    background-color: #219a52;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    -moz-box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+.btn-gerer-livres i {
+    margin-right: 8px;
+}
+
+/* --- STATISTIQUE TOTAL --- */
+.rapport-total-livres {
+    background-color: #ffffff;
+    border-left: 5px solid #2ecc71;
+    padding: 14px 20px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.rapport-total-livres strong {
+    font-size: 22px;
+    color: #27ae60;
+    font-weight: 800;
+}
+
+/* --- TABLEAU --- */
+.rapport-table-livres {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rapport-table-livres thead th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 15px 18px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    border: none;
+}
+
+.rapport-table-livres thead th:first-child {
+    width: 120px;
+}
+
+.rapport-table-livres thead th:last-child {
+    text-align: center;
+    width: 130px;
+}
+
+.rapport-table-livres tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #34495e;
+    vertical-align: middle;
+}
+
+.rapport-table-livres tbody tr:hover {
+    background-color: #eafaf1;
+}
+
+.rapport-table-livres tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Colonnes */
+.rapport-table-livres .col-code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-weight: 700;
+    color: #2980b9;
+    font-size: 13px;
+}
+
+.rapport-table-livres .col-titre {
+    font-weight: 600;
+    color: #2c3e50;
+    font-style: italic;
+}
+
+.rapport-table-livres .col-pages {
+    text-align: center;
+}
+
+/* Badge pages */
+.pages-badge {
+    display: inline-block;
+    background-color: #eafaf1;
+    color: #27ae60;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid #d5f5e3;
+    white-space: nowrap;
+}
+
+/* --- ÉTAT VIDE --- */
+.rapport-empty-livres {
+    text-align: center;
+    padding: 50px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    color: #95a5a6;
+}
+
+.rapport-empty-livres i {
+    display: block;
+    font-size: 52px;
+    color: #bdc3c7;
+    margin-bottom: 15px;
+}
+
+.rapport-empty-livres p {
+    font-size: 15px;
+    margin: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .rapport-title-livres {
+        font-size: 20px;
+    }
+
+    .btn-gerer-livres {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .rapport-total-livres strong {
+        font-size: 18px;
+    }
+
+    .rapport-table-livres thead th,
+    .rapport-table-livres tbody td {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .rapport-table-livres .col-code {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rapport-title-livres {
+        font-size: 17px;
+    }
+
+    .rapport-table-livres thead th:last-child,
+    .rapport-table-livres tbody td:last-child {
+        display: none;
+    }
+
+    .rapport-table-livres .col-pages {
+        display: none;
+    }
+
+    .rapport-empty-livres i {
+        font-size: 40px;
+    }
+
+    .rapport-empty-livres p {
+        font-size: 13px;
+    }
+}
+
+/* --- IMPRESSION --- */
+@media print {
+    .btn-gerer-livres {
+        display: none !important;
+    }
+
+    .rapport-table-livres {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+
+    .rapport-total-livres {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+
+    .pages-badge {
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES RAPPORT : LIVRES ET LEURS AUTEURS
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- TITRE DU RAPPORT --- */
+.rapport-title-livres-auteurs {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #9b59b6;
+}
+
+.rapport-title-livres-auteurs i {
+    color: #9b59b6;
+    margin-right: 12px;
+    font-size: 26px;
+}
+
+/* --- GROUPE PAR LIVRE --- */
+.livre-groupe {
+    background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* --- EN-TÊTE DU GROUPE --- */
+.livre-groupe-header {
+    background-color: #9b59b6;
+    background-image: -webkit-linear-gradient(135deg, #8e44ad, #9b59b6);
+    background-image: -moz-linear-gradient(135deg, #8e44ad, #9b59b6);
+    background-image: -o-linear-gradient(135deg, #8e44ad, #9b59b6);
+    background-image: linear-gradient(135deg, #8e44ad, #9b59b6);
+    color: #ffffff;
+    padding: 16px 25px;
+}
+
+.livre-groupe-header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.livre-groupe-header .livre-titre {
+    float: left;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    max-width: 75%;
+}
+
+.livre-groupe-header .livre-titre i {
+    margin-right: 10px;
+    color: #f1c40f;
+}
+
+.livre-groupe-header .livre-count {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 5px 14px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* --- CORPS DU GROUPE --- */
+.livre-groupe-body {
+    padding: 5px 0;
+}
+
+/* --- TABLEAU DANS LE GROUPE --- */
+.livre-auteurs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.livre-auteurs-table thead th {
+    background-color: #f8f5fb;
+    color: #6c3483;
+    padding: 12px 22px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    border-bottom: 2px solid #d7bde2;
+}
+
+.livre-auteurs-table thead th:first-child {
+    padding-left: 25px;
+}
+
+.livre-auteurs-table thead th:last-child {
+    text-align: center;
+    width: 100px;
+}
+
+.livre-auteurs-table tbody td {
+    padding: 13px 22px;
+    border-bottom: 1px solid #f4ecf7;
+    color: #34495e;
+    vertical-align: middle;
+}
+
+.livre-auteurs-table tbody td:first-child {
+    padding-left: 25px;
+}
+
+.livre-auteurs-table tbody tr:hover {
+    background-color: #faf5fc;
+}
+
+.livre-auteurs-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Colonne Auteur */
+.livre-auteurs-table .col-auteur {
+    font-weight: 600;
+    color: #2c3e50;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+/* Colonne Date */
+.livre-auteurs-table .col-date {
+    color: #7f8c8d;
+}
+
+.livre-auteurs-table .col-date i {
+    color: #bdc3c7;
+    margin-right: 5px;
+}
+
+/* Colonne Pages */
+.livre-auteurs-table .col-pages {
+    text-align: center;
+}
+
+.pages-badge-violet {
+    display: inline-block;
+    background-color: #f4ecf7;
+    color: #8e44ad;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid #d7bde2;
+}
+
+/* --- ÉTAT VIDE --- */
+.rapport-empty-livres-auteurs {
+    background-color: #f4ecf7;
+    color: #6c3483;
+    padding: 25px 30px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-left: 5px solid #9b59b6;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.rapport-empty-livres-auteurs i {
+    display: block;
+    font-size: 44px;
+    color: #9b59b6;
+    margin-bottom: 12px;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .rapport-title-livres-auteurs {
+        font-size: 20px;
+    }
+
+    .livre-groupe-header .livre-titre {
+        float: none;
+        display: block;
+        font-size: 14px;
+        max-width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .livre-groupe-header .livre-count {
+        float: none;
+        display: inline-block;
+    }
+
+    .livre-auteurs-table thead th,
+    .livre-auteurs-table tbody td {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .livre-auteurs-table thead th:first-child,
+    .livre-auteurs-table tbody td:first-child {
+        padding-left: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rapport-title-livres-auteurs {
+        font-size: 17px;
+    }
+
+    .livre-groupe-header {
+        padding: 12px 18px;
+    }
+
+    .livre-groupe-header .livre-titre {
+        font-size: 13px;
+    }
+
+    .livre-auteurs-table thead th:last-child,
+    .livre-auteurs-table tbody td:last-child {
+        display: none;
+    }
+
+    .col-pages {
+        display: none;
+    }
+
+    .rapport-empty-livres-auteurs {
+        font-size: 13px;
+        padding: 20px;
+    }
+
+    .rapport-empty-livres-auteurs i {
+        font-size: 34px;
+    }
+}
+
+/* --- IMPRESSION --- */
+@media print {
+    .livre-groupe {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+        page-break-inside: avoid;
+    }
+
+    .livre-groupe-header {
+        background-color: #9b59b6 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES RAPPORT : LIVRES SANS AUTEUR
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- TITRE DU RAPPORT --- */
+.rapport-title-orphelins {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #f39c12;
+}
+
+.rapport-title-orphelins i {
+    color: #f39c12;
+    margin-right: 12px;
+    font-size: 26px;
+}
+
+/* --- STATISTIQUE --- */
+.rapport-stats-orphelins {
+    background-color: #ffffff;
+    border-left: 5px solid #f39c12;
+    padding: 18px 25px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.rapport-stats-orphelins .stats-label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #95a5a6;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.rapport-stats-orphelins .stats-value {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: #f39c12;
+}
+
+/* --- TABLEAU --- */
+.rapport-table-orphelins {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rapport-table-orphelins thead th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 15px 18px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    border: none;
+}
+
+.rapport-table-orphelins thead th:first-child {
+    width: 120px;
+}
+
+.rapport-table-orphelins thead th:last-child {
+    text-align: center;
+    width: 100px;
+}
+
+.rapport-table-orphelins tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #34495e;
+    vertical-align: middle;
+}
+
+.rapport-table-orphelins tbody tr:hover {
+    background-color: #fef9f4;
+}
+
+.rapport-table-orphelins tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Colonne Code */
+.rapport-table-orphelins .col-code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-weight: 700;
+    color: #e67e22;
+    font-size: 13px;
+}
+
+/* Colonne Titre */
+.rapport-table-orphelins .col-titre {
+    font-weight: 600;
+    color: #2c3e50;
+    font-style: italic;
+}
+
+/* Colonne Pages */
+.rapport-table-orphelins .col-pages {
+    text-align: center;
+}
+
+/* Badge pages */
+.pages-badge-orange {
+    display: inline-block;
+    background-color: #fef5e7;
+    color: #e67e22;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid #fdebd0;
+}
+
+/* --- ALERTE SUCCÈS (AUCUN ORPHELIN) --- */
+.rapport-ok-orphelins {
+    background-color: #d5f5e3;
+    color: #1e8449;
+    padding: 25px 30px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-left: 5px solid #27ae60;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.rapport-ok-orphelins i {
+    display: block;
+    font-size: 48px;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .rapport-title-orphelins {
+        font-size: 20px;
+    }
+
+    .rapport-stats-orphelins .stats-value {
+        font-size: 22px;
+    }
+
+    .rapport-table-orphelins thead th,
+    .rapport-table-orphelins tbody td {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .rapport-table-orphelins .col-code {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rapport-title-orphelins {
+        font-size: 17px;
+    }
+
+    /* Masquer colonne Pages */
+    .rapport-table-orphelins thead th:last-child,
+    .rapport-table-orphelins tbody td:last-child {
+        display: none;
+    }
+
+    .rapport-ok-orphelins {
+        font-size: 14px;
+        padding: 20px;
+    }
+
+    .rapport-ok-orphelins i {
+        font-size: 36px;
+    }
+}
+
+/* --- IMPRESSION --- */
+@media print {
+    .rapport-table-orphelins {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+
+    .rapport-stats-orphelins {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+
+    .rapport-ok-orphelins {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES RAPPORT : PUBLICATIONS PAR AUTEUR
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- EN-TÊTE DU RAPPORT --- */
+.report-header-box {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 6px solid #2c3e50;
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.report-header-box:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.report-header-box .header-info {
+    float: left;
+}
+
+.report-header-box .header-actions {
+    float: right;
+}
+
+.report-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.report-title i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.report-subtitle {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* --- BOUTON IMPRIMER --- */
+.btn-print-outline {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #3498db;
+    background-color: #ffffff;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-print-outline:hover {
+    background-color: #3498db;
+    color: #ffffff;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    -moz-box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-print-outline i {
+    margin-right: 7px;
+}
+
+/* --- GROUPE PAR AUTEUR --- */
+.author-group {
+    background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- EN-TÊTE DU GROUPE AUTEUR --- */
+.author-header {
+    background-color: #2c3e50;
+    background-image: -webkit-linear-gradient(135deg, #2c3e50, #3498db);
+    background-image: -moz-linear-gradient(135deg, #2c3e50, #3498db);
+    background-image: -o-linear-gradient(135deg, #2c3e50, #3498db);
+    background-image: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #ffffff;
+    padding: 16px 25px;
+}
+
+.author-header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.author-header .author-name {
+    float: left;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.author-header .author-name i {
+    margin-right: 10px;
+    color: #f1c40f;
+    font-size: 20px;
+}
+
+.author-header .work-count {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 5px 14px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* --- TABLEAU --- */
+.uago-report-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.uago-report-table thead th {
+    background-color: #f8f9fa;
+    color: #34495e;
+    padding: 13px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    border-bottom: 2px solid #3498db;
+}
+
+.uago-report-table thead th.text-center {
+    text-align: center;
+}
+
+.uago-report-table thead th.text-right {
+    text-align: right;
+}
+
+.uago-report-table tbody td {
+    padding: 13px 20px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #34495e;
+    vertical-align: middle;
+}
+
+.uago-report-table tbody tr:hover {
+    background-color: #f4f8fb;
+}
+
+.uago-report-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Colonne Titre */
+.book-title {
+    font-weight: 600;
+    color: #2980b9;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Colonne Date */
+.uago-report-table .text-center {
+    text-align: center;
+    color: #7f8c8d;
+}
+
+/* Badge pages */
+.page-badge {
+    display: inline-block;
+    background-color: #ebf5fb;
+    color: #3498db;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid #d6eaf8;
+}
+
+/* --- MENTIONS (TAGS) --- */
+.tag-major {
+    display: inline-block;
+    background-color: #fadbd8;
+    color: #c0392b;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.tag-standard {
+    display: inline-block;
+    background-color: #d5f5e3;
+    color: #27ae60;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+/* --- ÉTAT VIDE --- */
+.empty-state {
+    text-align: center;
+    padding: 60px 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    color: #95a5a6;
+}
+
+.empty-state i {
+    display: block;
+    font-size: 56px;
+    color: #bdc3c7;
+    margin-bottom: 18px;
+}
+
+.empty-state p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* --- PIED DE PAGE --- */
+.report-footer {
+    margin-top: 30px;
+    padding: 18px 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.report-footer p {
+    font-size: 12px;
+    color: #95a5a6;
+    margin: 0;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .report-header-box {
+        padding: 18px 20px;
+    }
+
+    .report-header-box .header-info {
+        float: none;
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .report-header-box .header-actions {
+        float: none;
+        display: block;
+    }
+
+    .btn-print-outline {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .report-title {
+        font-size: 18px;
+    }
+
+    .author-header {
+        padding: 12px 18px;
+    }
+
+    .author-header .author-name {
+        float: none;
+        display: block;
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .author-header .work-count {
+        float: none;
+        display: inline-block;
+    }
+
+    .uago-report-table thead th,
+    .uago-report-table tbody td {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    /* Masquer colonne Mention sur tablette */
+    .uago-report-table thead th:last-child,
+    .uago-report-table tbody td:last-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .report-title {
+        font-size: 16px;
+    }
+
+    .report-subtitle {
+        font-size: 11px;
+    }
+
+    .author-header .author-name {
+        font-size: 13px;
+    }
+
+    .book-title {
+        font-size: 12px;
+    }
+
+    .empty-state i {
+        font-size: 40px;
+    }
+
+    .empty-state p {
+        font-size: 14px;
+    }
+}
+
+/* --- IMPRESSION --- */
+@media print {
+    .report-container {
+        padding: 0;
+        background-color: #ffffff;
+    }
+
+    .btn-print-outline {
+        display: none !important;
+    }
+
+    .report-header-box {
+        box-shadow: none;
+        border: 2px solid #000;
+    }
+
+    .author-group {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+        page-break-inside: avoid;
+    }
+
+    .author-header {
+        background-color: #2c3e50 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .report-footer {
+        box-shadow: none;
+        border-top: 1px solid #cccccc;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   BIBLIO-TECH UAGO - STYLES RAPPORT : STATISTIQUES PAR AUTEUR
+   Compatible Visual Studio 2012 | CSS2/CSS3
+   ============================================================ */
+
+/* --- TITRE DU RAPPORT --- */
+.rapport-title-stats {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #34495e;
+}
+
+.rapport-title-stats i {
+    color: #34495e;
+    margin-right: 12px;
+    font-size: 26px;
+}
+
+/* --- GRILLE DE STATISTIQUES GLOBALES --- */
+.stats-global-grid {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 30px;
+}
+
+.stats-global-grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.stats-global-grid .stats-col {
+    float: left;
+    width: 33.3333%;
+    padding: 0 10px;
+}
+
+/* --- CARTE STATISTIQUE --- */
+.stats-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Couleurs des cartes */
+.stats-card.blue {
+    border-top: 4px solid #3498db;
+}
+
+.stats-card.green {
+    border-top: 4px solid #27ae60;
+}
+
+.stats-card.orange {
+    border-top: 4px solid #e67e22;
+}
+
+/* Corps de la carte */
+.stats-card-body {
+    padding: 28px 20px;
+}
+
+.stats-card-body .stats-card-label {
+    display: block;
+    font-size: 13px;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.stats-card-body .stats-card-value {
+    font-size: 38px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+}
+
+.stats-card.blue .stats-card-value {
+    color: #3498db;
+}
+
+.stats-card.green .stats-card-value {
+    color: #27ae60;
+}
+
+.stats-card.orange .stats-card-value {
+    color: #e67e22;
+}
+
+/* --- TABLEAU --- */
+.rapport-table-stats {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rapport-table-stats thead th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 15px 18px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    border: none;
+}
+
+.rapport-table-stats thead th:first-child {
+    width: auto;
+}
+
+.rapport-table-stats thead th:not(:first-child) {
+    text-align: center;
+    width: 150px;
+}
+
+.rapport-table-stats tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #34495e;
+    vertical-align: middle;
+}
+
+.rapport-table-stats tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.rapport-table-stats tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Colonne Auteur */
+.rapport-table-stats .col-auteur {
+    font-weight: 700;
+    color: #2c3e50;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+/* Colonnes chiffrées */
+.rapport-table-stats .col-nombre,
+.rapport-table-stats .col-total,
+.rapport-table-stats .col-moyenne {
+    text-align: center;
+    font-weight: 600;
+}
+
+.rapport-table-stats .col-nombre {
+    color: #3498db;
+}
+
+.rapport-table-stats .col-total {
+    color: #e67e22;
+}
+
+.rapport-table-stats .col-moyenne {
+    color: #27ae60;
+}
+
+/* Badges pour les chiffres */
+.badge-stat-blue {
+    display: inline-block;
+    background-color: #ebf5fb;
+    color: #3498db;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.badge-stat-orange {
+    display: inline-block;
+    background-color: #fef5e7;
+    color: #e67e22;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.badge-stat-green {
+    display: inline-block;
+    background-color: #eafaf1;
+    color: #27ae60;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+/* --- ÉTAT VIDE --- */
+.rapport-empty-stats {
+    background-color: #f8f9fa;
+    color: #7f8c8d;
+    padding: 25px 30px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-left: 5px solid #34495e;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.rapport-empty-stats i {
+    display: block;
+    font-size: 44px;
+    color: #bdc3c7;
+    margin-bottom: 12px;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .rapport-title-stats {
+        font-size: 20px;
+    }
+
+    .stats-global-grid .stats-col {
+        float: none;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 0;
+    }
+
+    .stats-card-body .stats-card-value {
+        font-size: 30px;
+    }
+
+    .stats-card-body .stats-card-label {
+        font-size: 12px;
+    }
+
+    .rapport-table-stats thead th,
+    .rapport-table-stats tbody td {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    /* Masquer colonne Moyenne sur tablette */
+    .rapport-table-stats thead th:last-child,
+    .rapport-table-stats tbody td:last-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rapport-title-stats {
+        font-size: 17px;
+    }
+
+    /* Masquer colonne Total Pages sur mobile */
+    .rapport-table-stats thead th:nth-child(3),
+    .rapport-table-stats tbody td:nth-child(3) {
+        display: none;
+    }
+
+    .rapport-empty-stats {
+        font-size: 13px;
+        padding: 20px;
+    }
+
+    .rapport-empty-stats i {
+        font-size: 34px;
+    }
+}
+
+/* --- IMPRESSION --- */
+@media print {
+    .stats-card {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+
+    .rapport-table-stats {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+
+    .rapport-empty-stats {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+}

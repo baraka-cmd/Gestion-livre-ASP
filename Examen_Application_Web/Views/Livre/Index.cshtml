@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Examen_Application_Web.Models.Livre>
+
+@{
+    ViewBag.Title = "Catalogue des Livres - Système UAGO";
+}
+
+<div class="desktop-wrapper">
+    
+    <div class="form-header-strip-index">
+        <div class="header-title-area">
+            <i class="fa fa-book"></i>
+            <label>Répertoire Général des Ouvrages</label>
+        </div>
+        <div class="header-actions-area">
+            <a href="@Url.Action("Create")" class="btn-index-add">
+                <i class="fa fa-plus-circle"></i> Nouveau Livre
+            </a>
+        </div>
+    </div>
+
+    <div class="form-content-body">
+        <div class="quick-stats-bar">
+            <span class="stat-item">Total Livres : <strong>@Model.Count()</strong></span>
+            <span class="stat-mode-indicator">Mode : Consultation Directe</span>
+        </div>
+
+        <div class="table-responsive">
+            <table class="uago-custom-table">
+                <thead>
+                    <tr>
+                        <th class="col-id">ID</th>
+                        <th class="col-titre">Titre de l'Ouvrage</th>
+                        <th class="col-pages">Pages</th>
+                        <th class="col-actions">Actions de Gestion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="cell-id">@item.idLivre</td>
+                            <td class="cell-titre">@item.titre</td>
+                            <td class="cell-pages">
+                                <span class="page-badge">@item.nbrepage p.</span>
+                            </td>
+                            <td class="cell-actions">
+                                <div class="action-buttons-group">
+                                    <a href="@Url.Action("Edit", new { id = item.idLivre })" class="btn-mini-edit" title="Modifier">
+                                        <i class="fa fa-edit"></i> Modifier
+                                    </a>
+                                    
+                                    <a href="@Url.Action("Delete", new { id = item.idLivre })" class="btn-mini-delete" title="Supprimer" onclick="return confirm('Confirmer la suppression de @item.titre ?');">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @if (!Model.Any())
+        {
+            <div class="empty-state-container">
+                <i class="fa fa-folder-open-o"></i>
+                <p>Aucune donnée disponible dans le catalogue des livres.</p>
+                <a href="@Url.Action("Create")" class="btn-action primary">Initialiser le premier livre</a>
+            </div>
+        }
+    </div>
+
+    <div class="index-footer-strip">
+        <span class="system-time">Système UAGO - Gestion de Bibliothèque</span>
+        <span class="pagination-info">Page 1 sur 1</span>
+    </div>
+</div>

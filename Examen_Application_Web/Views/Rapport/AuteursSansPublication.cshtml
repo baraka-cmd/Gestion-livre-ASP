@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Examen_Application_Web.Models.Auteur>
+
+@{
+    ViewBag.Title = "Auteurs sans Publication - UAGO";
+}
+
+<h2><i class="fa fa-user-slash"></i> Auteurs sans Publication</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-success">
+        <i class="fa fa-check-circle"></i> Tous les auteurs ont au moins une publication !
+    </div>
+}
+else
+{
+    <p><strong>@Model.Count()</strong> auteur(s) sans publication</p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Post-Nom</th>
+                <th>Prénom</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>#@item.idAuteur</td>
+                    <td>@item.nomAut</td>
+                    <td>@item.postnomAut</td>
+                    <td>@item.prenomAut</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
